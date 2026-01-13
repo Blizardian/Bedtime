@@ -1,0 +1,14 @@
+using UnityEngine;
+
+public class BulletLogic : MonoBehaviour
+{
+    [SerializeField] private float bulletSpeed = 20f;
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.linearVelocity = transform.forward * bulletSpeed; // Immediately move forward
+        Destroy(gameObject, 5f);
+    }
+}
