@@ -407,9 +407,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ec5e239aed26a45b2ea6024e8dba04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootMechanic
-  Camera: {fileID: 0}
+  Camera: {fileID: 1794447830}
   bullet: {fileID: 5394580448838141519, guid: 6eefcd8a9f1278c4fa8ab5d36bff2d67, type: 3}
   spawnPosition: {fileID: 0}
+  timer: 0
+  timerIsOn: 0
+  ammoInWeapon: 0
+  maxAmmo: 15
 --- !u!1 &1794447830
 GameObject:
   m_ObjectHideFlags: 0
