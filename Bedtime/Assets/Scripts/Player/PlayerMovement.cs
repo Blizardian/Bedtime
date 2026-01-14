@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float jumpForce;
 
+    [SerializeField] private float dodgeForce;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
         cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        SprintLogic();
+        DodgeLogic();
 
         JumpLogic();
     }
@@ -65,6 +67,36 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             movementSpeed = originalMovementSpeed;
+        }
+    }
+
+    public void DodgeLogic()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Vector3 dodgeDir = Vector3.zero;
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                dodgeDir += -transform.right;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                dodgeDir += transform.right;
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                dodgeDir += transform.forward;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                dodgeDir += -transform.forward;
+            }
+
+            if (dodgeDir != Vector3.zero)
+            {
+                rb.linearVelocity = dodgeDir.normalized * dodgeForce;
+            }
         }
     }
 
@@ -92,6 +124,10 @@ public class PlayerMovement : MonoBehaviour
             originalMovementSpeed = 5;
         }
 
+        if (movementSpeed == 0)
+        {
+            movementSpeed = originalMovementSpeed;
+        }
         if (sensitivity == 0)
         {
             sensitivity = 80;
@@ -100,6 +136,11 @@ public class PlayerMovement : MonoBehaviour
         if (jumpForce == 0)
         {
             jumpForce = 5;
+        }
+
+        if (dodgeForce == 0)
+        {
+            dodgeForce = 8;
         }
 
         // Automaticly sets these in the inspector
