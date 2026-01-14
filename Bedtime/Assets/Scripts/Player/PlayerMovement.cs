@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
 
     [SerializeField] private float dodgeForce;
+    [SerializeField] private float dodgeTimer = 0;
+    [SerializeField] private float dodgeTimerMax = 3;
+    [SerializeField] private bool dodgeTimerIsOn = false;
 
     void Start()
     {
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movement();
+
+        DodgeTimerLogic();
     }
 
     /// <summary>
@@ -72,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void DodgeLogic()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dodgeTimerIsOn == false)
         {
             Vector3 dodgeDir = Vector3.zero;
 
@@ -96,7 +101,22 @@ public class PlayerMovement : MonoBehaviour
             if (dodgeDir != Vector3.zero)
             {
                 rb.linearVelocity = dodgeDir.normalized * dodgeForce;
+                dodgeTimerIsOn = true;
             }
+        }
+    }
+
+    private void DodgeTimerLogic()
+    {
+        if (dodgeTimerIsOn == true)
+        {
+            dodgeTimer = dodgeTimer + Time.deltaTime;
+        }
+
+        if (dodgeTimer >= dodgeTimerMax)
+        {
+            dodgeTimerIsOn = false;
+            dodgeTimer = 0;
         }
     }
 

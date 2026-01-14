@@ -14,7 +14,7 @@ public class ShootMechanic : MonoBehaviour
     [SerializeField] private int ammoInWeapon;
     //[Range(0, 1000)][SerializeField] private int totalAmmoAmmount;
     [SerializeField] private int maxAmmo;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         timerLimit = 3;
@@ -24,16 +24,18 @@ public class ShootMechanic : MonoBehaviour
         maxAmmo = 15;
         ammoInWeapon = maxAmmo;
 
+        AssignForgottenAtStart();
+
+    }
+    private void AssignForgottenAtStart()
+    {
         if (Camera == null)
         {
             Camera = GameObject.Find("Main Camera");
             Debug.Log("INFO: Player has been automatically set");
         }
-
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timerIsOn == true)

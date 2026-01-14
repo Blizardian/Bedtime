@@ -11,4 +11,9 @@ public class BulletLogic : MonoBehaviour
         rb.linearVelocity = transform.forward * bulletSpeed; // Immediately move forward
         Destroy(gameObject, 5f);
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+    }
 }
