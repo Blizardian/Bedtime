@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Includes the movement of the player and the camera
+    /// Includes the movement of the player and the mouse movement
     /// </summary>
     public void Movement()
     {
@@ -75,9 +75,11 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public void JumpLogic()
     {
-        if (Input.GetKey(KeyCode.Space) && onGround)
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
-            rb.AddForce(new Vector3(rb.angularVelocity.x, jumpForce, rb.angularVelocity.y));
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
@@ -99,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumpForce == 0)
         {
-            jumpForce = 15;
+            jumpForce = 5;
         }
 
         // Automaticly sets these in the inspector
@@ -123,22 +125,15 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("INFO: Camera has already been set manually");
         }
     }
-
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            onGround = true;
-            Debug.Log("Player is on the ground");
-        }
+        onGround = true;
+        Debug.Log("Player is on the ground");
     }
 
     public void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            onGround = false;
-            Debug.Log("Player is NOT on the ground");
-        }
+        onGround = false;
+        Debug.Log("Player is NOT on the ground");
     }
 }
