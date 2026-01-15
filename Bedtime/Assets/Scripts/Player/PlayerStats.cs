@@ -3,11 +3,14 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
+    // Singleton Related
     public static PlayerStats Instance;
 
+    // HP Related
     public int HP;
     public int MaxHP = 100;
 
+    // UI
     public TMP_Text HP_UI_Text;
     private void Awake()
     {

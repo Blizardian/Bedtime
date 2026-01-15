@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class BulletLogic : MonoBehaviour
 {
+    // Bullet Settings
     [SerializeField] private float bulletSpeed = 20f;
-    private Rigidbody rb;
 
+    // Rigidbody
+    private Rigidbody rb;
     void Start()
     {
         rb = GetComponent<Rigidbody>();

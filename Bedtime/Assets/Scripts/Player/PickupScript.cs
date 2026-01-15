@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class PickupScript : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Debug.Log(PlayerStats.Instance.HP);
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("You gave yourself damage");
+            PlayerStats.Instance.HP -= 25;
+        }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("HealthPickup"))

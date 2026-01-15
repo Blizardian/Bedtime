@@ -3,25 +3,32 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Movement Related
     [SerializeField] private float movementSpeed;
     [SerializeField] private float originalMovementSpeed;
+    [SerializeField] private bool onGround;
 
+    // For the inspector
     public GameObject Player;
     public Transform cameraTransform;
 
+    // Mouse Movement Related
     private float xRotation = 0f;
     [SerializeField] private float sensitivity = 80f;
 
-    [SerializeField] private bool onGround;
-
+    // Rigidbody
     private Rigidbody rb;
+
+    // Jump related
     [SerializeField] private float jumpForce;
 
+    // Dodge related
     [SerializeField] private float dodgeForce;
     [SerializeField] private float dodgeTimer = 0;
     [SerializeField] private float dodgeTimerMax = 3;
     [SerializeField] private bool dodgeTimerIsOn = false;
 
+    // Cooldown
     public Slider DodgeCoolDownSlider;
     void Start()
     {
@@ -38,8 +45,6 @@ public class PlayerMovement : MonoBehaviour
         Movement();
 
         DodgeTimerLogic();
-
-        
     }
 
     /// <summary>

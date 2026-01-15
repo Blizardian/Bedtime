@@ -3,22 +3,24 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ShootMechanic : MonoBehaviour
 {
+    // For the inspector
     public GameObject Camera;
-
     public GameObject bullet;
     public Transform spawnPosition;
+    public TMP_Text AmmountOfAmmoText;
 
+    // Timer Related
     public float timer;
     private float timerLimit;
     public bool timerIsOn;
 
+    // Cooldown
     public Slider ReloadCooldownSlider;
 
+    // Ammo Related
     [SerializeField] private int ammoInWeapon;
     //[Range(0, 1000)][SerializeField] private int totalAmmoAmmount;
     [SerializeField] private int maxAmmo;
-
-    public TMP_Text AmmountOfAmmoText;
 
     void Start()
     {
