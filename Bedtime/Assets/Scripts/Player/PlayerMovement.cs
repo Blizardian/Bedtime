@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dodgeTimerMax = 3;
     [SerializeField] private bool dodgeTimerIsOn = false;
 
+    public Slider DodgeCoolDownSlider;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         Movement();
 
         DodgeTimerLogic();
+
+        
     }
 
     /// <summary>
@@ -108,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DodgeTimerLogic()
     {
+        // Timer
         if (dodgeTimerIsOn == true)
         {
             dodgeTimer = dodgeTimer + Time.deltaTime;
@@ -117,6 +122,16 @@ public class PlayerMovement : MonoBehaviour
         {
             dodgeTimerIsOn = false;
             dodgeTimer = 0;
+        }
+
+        // Slider
+        if (dodgeTimerIsOn == false)
+        {
+            DodgeCoolDownSlider.value = dodgeTimerMax;
+        }
+        if (dodgeTimerIsOn == true)
+        {
+            DodgeCoolDownSlider.value = dodgeTimer;
         }
     }
 
