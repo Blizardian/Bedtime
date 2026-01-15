@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class ShootMechanic : MonoBehaviour
@@ -16,6 +17,8 @@ public class ShootMechanic : MonoBehaviour
     [SerializeField] private int ammoInWeapon;
     //[Range(0, 1000)][SerializeField] private int totalAmmoAmmount;
     [SerializeField] private int maxAmmo;
+
+    public TMP_Text AmmountOfAmmoText;
 
     void Start()
     {
@@ -49,6 +52,16 @@ public class ShootMechanic : MonoBehaviour
         Shooting();
 
         RunTimerReload();
+
+        ShowAmmoInWeapon();
+    }
+
+    /// <summary>
+    /// Shows the ammount of ammo in the UI
+    /// </summary>
+    private void ShowAmmoInWeapon()
+    {
+        AmmountOfAmmoText.text = ammoInWeapon + " / " + maxAmmo;
     }
 
     /// <summary>
@@ -105,6 +118,9 @@ public class ShootMechanic : MonoBehaviour
         ReloadCooldownTimer();
     }
 
+    /// <summary>
+    /// Updates the UI of the reload timer (It updates the slider correctly)
+    /// </summary>
     private void ReloadCooldownTimer()
     {
         if (timerIsOn == false)
