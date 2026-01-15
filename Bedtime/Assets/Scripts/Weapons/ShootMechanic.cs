@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ShootMechanic : MonoBehaviour
 {
     public GameObject Camera;
@@ -10,6 +10,8 @@ public class ShootMechanic : MonoBehaviour
     public float timer;
     private float timerLimit;
     public bool timerIsOn;
+
+    public Slider ReloadCooldownSlider;
 
     [SerializeField] private int ammoInWeapon;
     //[Range(0, 1000)][SerializeField] private int totalAmmoAmmount;
@@ -25,6 +27,7 @@ public class ShootMechanic : MonoBehaviour
         ammoInWeapon = maxAmmo;
 
         AssignForgottenAtStart();
+        ReloadCooldownTimer();
 
     }
     private void AssignForgottenAtStart()
@@ -97,6 +100,21 @@ public class ShootMechanic : MonoBehaviour
             ammoInWeapon = maxAmmo;
             timerIsOn = false;
             timer = 0; // Resets the timer
+        }
+
+        ReloadCooldownTimer();
+    }
+
+    private void ReloadCooldownTimer()
+    {
+        if (timerIsOn == false)
+        {
+            ReloadCooldownSlider.value = timerLimit;
+        }
+
+        if (timerIsOn == true)
+        {
+            ReloadCooldownSlider.value = timer;
         }
     }
 }
