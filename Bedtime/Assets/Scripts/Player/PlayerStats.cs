@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class PlayerStats : MonoBehaviour
 
     public int HP;
     public int MaxHP = 100;
+
+    public TMP_Text HP_UI_Text;
     private void Awake()
     {
         HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start");
@@ -18,15 +21,30 @@ public class PlayerStats : MonoBehaviour
 
         Instance = this;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        HPLimiter();
 
+        HPTextUpdater();
+    }
+
+    /// <summary>
+    /// Updates the HP in the UI
+    /// </summary>
+    private void HPTextUpdater()
+    {
+        HP_UI_Text.text = "HP: " + HP;
+    }
+
+    /// <summary>
+    /// Limits the HP to the MAX HP, so that it can't succeed the MaxH
+    /// </summary>
+    private void HPLimiter()
+    {
+        if (HP > MaxHP)
+        {
+            HP = MaxHP;
+        }
     }
 }
