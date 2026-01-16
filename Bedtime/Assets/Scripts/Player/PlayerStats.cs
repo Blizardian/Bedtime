@@ -30,6 +30,19 @@ public class PlayerStats : MonoBehaviour
         HPLimiter();
 
         HPTextUpdater();
+
+        HealthChecker();
+    }
+
+    /// <summary>
+    /// Checks if the player should be dead or not
+    /// </summary>
+    private void HealthChecker()
+    {
+        if (HP <= 0)
+        {
+            Debug.Log("Player has died");
+        }
     }
 
     /// <summary>

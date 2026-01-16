@@ -16,6 +16,16 @@ public class BulletLogic : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy1"))
+        {
+            Enemy1Behaviour enemy = collision.gameObject.GetComponent<Enemy1Behaviour>();
+
+            if (enemy != null)
+            {
+                enemy.enemy1Health -= 25;
+                Debug.Log("Damage done");
+            }
+            Destroy(gameObject);
+        }
     }
 }
