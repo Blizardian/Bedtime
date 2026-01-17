@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     // Movement Related
     [SerializeField] private float movementSpeed;
     [SerializeField] private float originalMovementSpeed;
-    [SerializeField] private bool onGround;
+    public bool onGround;
 
     // For the inspector
     public GameObject Player;
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         float MouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         float MouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        transform.Rotate(Vector3.up * MouseX);
+        transform.Rotate(Vector3.up * MouseX); // Look left and right
 
         xRotation -= MouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
@@ -204,10 +204,16 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("INFO: Camera has already been set manually");
         }
     }
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        onGround = true;
-        Debug.Log("Player is on the ground");
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.5f)
+            {
+                onGround = true;
+                return;
+            }
+        }
     }
 
     public void OnCollisionExit(Collision collision)
