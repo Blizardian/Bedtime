@@ -22,6 +22,12 @@ public class ShootMechanic : MonoBehaviour
     //[Range(0, 1000)][SerializeField] private int totalAmmoAmmount;
     [SerializeField] private int maxAmmo;
 
+    // Weapon related
+    public bool hasWeapon;
+    public GameObject weaponPickup;
+    public GameObject weaponPlayer;
+    public GameObject weaponUI;
+
     void Start()
     {
         timerLimit = 3;
@@ -34,7 +40,20 @@ public class ShootMechanic : MonoBehaviour
         AssignForgottenAtStart();
         ReloadCooldownTimer();
 
+        weaponPickup = GameObject.Find("WeaponPickup");
+        weaponPlayer = GameObject.Find("BulletSpawn");
+        weaponUI = GameObject.Find("WeaponStats");
+
+        DisableWeapon();
+
     }
+
+    private void DisableWeapon()
+    {
+        weaponPlayer.SetActive(false); // Set the gun inactive
+        weaponUI.SetActive(false); // Disable the weaponUI
+    }
+
     private void AssignForgottenAtStart()
     {
         if (Camera == null)
@@ -46,16 +65,28 @@ public class ShootMechanic : MonoBehaviour
 
     void Update()
     {
-        if (timerIsOn == true)
+        if (hasWeapon)
         {
-            Reload();
+            if (timerIsOn == true)
+            {
+                Reload();
+            }
+
+            Shooting();
+
+            RunTimerReload();
+
+            ShowAmmoInWeapon();
+
+            EnablePlayerGun();
         }
 
-        Shooting();
+    }
 
-        RunTimerReload();
-
-        ShowAmmoInWeapon();
+    private void EnablePlayerGun()
+    {
+        weaponPlayer.SetActive(true);
+        weaponUI.SetActive(true);
     }
 
     /// <summary>
@@ -133,6 +164,15 @@ public class ShootMechanic : MonoBehaviour
         if (timerIsOn == true)
         {
             ReloadCooldownSlider.value = timer;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Watergun"))
+        {
+            hasWeapon = true;
+            Destroy(collision.gameObject);
         }
     }
 }
