@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Enemy1Behaviour : MonoBehaviour
@@ -11,13 +12,47 @@ public class Enemy1Behaviour : MonoBehaviour
     [SerializeField] float explodeTimerMax;
     [SerializeField] bool explodeTimerIsOn;
 
+    // Show Range
+    [SerializeField] GameObject explodeRangePrefab;
+    GameObject showExplodeRange;
+    [SerializeField] float showRange;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        explodeTimerMax = 1;
-        explodeRange = 3;
-        target = GameObject.FindWithTag("Player").transform;
-        enemy1Health = 100;
+        SetIfZero();
+
+        // Instantiate a unique circle for this enemy
+        showExplodeRange = Instantiate(explodeRangePrefab, transform.position, Quaternion.identity);
+        showExplodeRange.transform.SetParent(transform); // so it moves with the enemy
+    }
+
+    private void SetIfZero()
+    {
+        if (explodeTimer == 0)
+        {
+            explodeTimerMax = 1;
+        }
+        if (showRange == 0)
+        {
+            showRange = 8;
+        }
+        if (explodeTimer == 0)
+        {
+            explodeRange = 3;
+        }
+
+        if (target == null)
+        {
+            target = GameObject.FindWithTag("Player").transform;
+        }
+
+        if (enemy1Health == 0)
+        {
+            enemy1Health = 100;
+        }
+
     }
 
     // Update is called once per frame
@@ -58,6 +93,15 @@ public class Enemy1Behaviour : MonoBehaviour
 
                 Destroy(gameObject);
             }
+
+            if (distance < showRange)
+            {
+                ShowExplodeRangeInGame();
+            }
+            else
+            {
+                showExplodeRange.SetActive(false);
+            }
         }
     }
 
@@ -74,5 +118,20 @@ public class Enemy1Behaviour : MonoBehaviour
         {
             explodeTimer = 0;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explodeRange);
+    }
+
+    void ShowExplodeRangeInGame()
+    {
+        Vector3 correctScale = new Vector3(explodeRange * 2, 0.0001f, explodeRange * 2);
+        Vector3 position = new Vector3(0, -1.08f, 0);
+        showExplodeRange.transform.localPosition = position;
+        showExplodeRange.transform.localScale = correctScale;
+        showExplodeRange.SetActive(true);
     }
 }

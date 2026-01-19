@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5192865365929139243}
   - component: {fileID: 798156847539246477}
   - component: {fileID: 4818221702859480232}
+  - component: {fileID: -2026720234266603474}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy1
@@ -139,7 +140,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 8.41
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -151,3 +152,23 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2026720234266603474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054674970091359157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7f95b0a37db844fbf845fbfefeec41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy1Behaviour
+  enemy1Health: 0
+  target: {fileID: 0}
+  explodeRange: 0
+  explodeTimer: 0
+  explodeTimerMax: 0
+  explodeTimerIsOn: 0
+  explodeRangePrefab: {fileID: 2531609409133433748, guid: 69bb467dc2a6db94cada31493eba1c9b, type: 3}
+  showRange: 0
