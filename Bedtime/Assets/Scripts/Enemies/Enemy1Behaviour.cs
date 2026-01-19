@@ -1,3 +1,4 @@
+using UnityEditor.Rendering;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class Enemy1Behaviour : MonoBehaviour
     [SerializeField] GameObject explodeRangePrefab;
     GameObject showExplodeRange;
     [SerializeField] float showRange;
+    [SerializeField] float preventExplosionRange;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,6 +55,8 @@ public class Enemy1Behaviour : MonoBehaviour
             enemy1Health = 100;
         }
 
+        preventExplosionRange = 6;
+
     }
 
     // Update is called once per frame
@@ -81,17 +85,25 @@ public class Enemy1Behaviour : MonoBehaviour
 
             if (explodeTimer >= explodeTimerMax)
             {
-                if (distance <= explodeRange)
+                if (distance > preventExplosionRange)
                 {
-                    Debug.Log("Player will get damage");
-                    PlayerStats.Instance.HP -= 50;
+                    Debug.Log("Stopped the explosion");
+                    ResetExplodeTimer();
                 }
                 else
                 {
-                    Debug.Log("Player will not get damage");
-                }
+                    if (distance <= explodeRange)
+                    {
+                        Debug.Log("Player will get damage");
+                        PlayerStats.Instance.HP -= 50;
+                    }
+                    else
+                    {
+                        Debug.Log("Player will not get damage");
+                    }
 
-                Destroy(gameObject);
+                    Destroy(gameObject);
+                }
             }
 
             if (distance < showRange)
@@ -103,6 +115,12 @@ public class Enemy1Behaviour : MonoBehaviour
                 showExplodeRange.SetActive(false);
             }
         }
+    }
+
+    private void ResetExplodeTimer()
+    {
+        explodeTimerIsOn = false;
+        explodeTimer = 0;
     }
 
     /// <summary>
@@ -124,6 +142,7 @@ public class Enemy1Behaviour : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explodeRange);
+        Gizmos.DrawWireSphere(transform.position, preventExplosionRange);
     }
 
     void ShowExplodeRangeInGame()
