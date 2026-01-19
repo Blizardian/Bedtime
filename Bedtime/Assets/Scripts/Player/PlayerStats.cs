@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
     public TMP_Text HP_UI_Text;
     private void Awake()
     {
-        HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start");
+        SetMaxHealth();
 
         if (Instance != null && Instance != this)
         {
@@ -23,6 +23,11 @@ public class PlayerStats : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void SetMaxHealth()
+    {
+        HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start"); // Ensures the HP is full at the start
     }
 
     void Update()
@@ -50,7 +55,7 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     private void HPTextUpdater()
     {
-        HP_UI_Text.text = "HP: " + HP;
+        HP_UI_Text.text = "HP: " + HP; // Update the text
     }
 
     /// <summary>

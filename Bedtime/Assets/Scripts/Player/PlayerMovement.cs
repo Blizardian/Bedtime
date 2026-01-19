@@ -36,6 +36,14 @@ public class PlayerMovement : MonoBehaviour
 
         AssignForgottenAtStart();
 
+        LockCursor();
+    }
+
+    /// <summary>
+    /// Locks the cursor and makes it not visible for the player
+    /// </summary>
+    private static void LockCursor()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -84,6 +92,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Player can dodge in a direction with LeftShift
+    /// </summary>
     public void DodgeLogic()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && dodgeTimerIsOn == false)
@@ -115,6 +126,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Contains the logic for the timer of the dogde
+    /// </summary>
     private void DodgeTimerLogic()
     {
         // Timer
@@ -206,9 +220,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
-        foreach (ContactPoint contact in collision.contacts)
+        foreach (ContactPoint contact in collision.contacts) // Checks ContactPoint of the object it collides with
         {
-            if (contact.normal.y > 0.5f)
+            if (contact.normal.y > 0.5f) // Checks if the contact point is mostly flat
             {
                 onGround = true;
                 return;

@@ -30,12 +30,13 @@ public class ShootMechanic : MonoBehaviour
 
     void Start()
     {
-        timerLimit = 3;
+        timerLimit = 3; //  Sets the timer limit
 
-        spawnPosition = Camera.transform.Find("BulletSpawn");
-        //totalAmmoAmmount = 45;
-        maxAmmo = 15;
-        ammoInWeapon = maxAmmo;
+        spawnPosition = Camera.transform.Find("BulletSpawn"); // Sets the spawn position
+
+        //totalAmmoAmmount = 45; // Sets the total ammount of ammo
+        maxAmmo = 15; // Sets the max ammo for the gun (1 magazine)
+        ammoInWeapon = maxAmmo; // Sets the ammo for the weapon equal to the max ammo, so you begin with a full clip
 
         AssignForgottenAtStart();
         ReloadCooldownTimer();
@@ -48,12 +49,16 @@ public class ShootMechanic : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Disables the weapon and UI for the weapon
+    /// </summary>
     private void DisableWeapon()
     {
         weaponPlayer.SetActive(false); // Set the gun inactive
         weaponUI.SetActive(false); // Disable the weaponUI
     }
 
+    //Sets forgotten values at the start
     private void AssignForgottenAtStart()
     {
         if (Camera == null)
@@ -83,6 +88,10 @@ public class ShootMechanic : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// Enables the gun and UI of the gun
+    /// </summary>
     private void EnablePlayerGun()
     {
         weaponPlayer.SetActive(true);
