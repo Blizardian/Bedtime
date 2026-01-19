@@ -103,7 +103,7 @@ public class ShootMechanic : MonoBehaviour
     private void RunTimerReload()
     {
         //Reload Mechanic if we have infinite ammo
-        if (Input.GetKeyDown(KeyCode.R) && timerIsOn == false)
+        if (Input.GetKeyDown(KeyCode.R) && timerIsOn == false && ammoInWeapon != 15)
         {
             timerIsOn = true;
         }
