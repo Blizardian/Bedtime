@@ -191,7 +191,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6280793701669501470, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6227127024521992269, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
     m_AddedGameObjects:
@@ -202,6 +203,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1265175604008733114, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1882337751}
+    - targetCorrespondingSourceObject: {fileID: 1265175604008733114, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1882337753}
+    - targetCorrespondingSourceObject: {fileID: 1265175604008733114, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1882337754}
     - targetCorrespondingSourceObject: {fileID: 6328452027867288487, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
       insertIndex: 3
       addedObject: {fileID: 1896633149}
@@ -886,6 +893,7 @@ GameObject:
   - component: {fileID: 579781904}
   - component: {fileID: 579781903}
   - component: {fileID: 579781902}
+  - component: {fileID: 579781905}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -987,6 +995,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579781900}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &579781905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579781900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshLink
+  m_SerializedVersion: 1
+  m_AgentTypeID: 0
+  m_StartPoint: {x: 5.6162453, y: 0.22879887, z: 0.031562805}
+  m_EndPoint: {x: 9.236843, y: -2.4266336, z: -0.036476135}
+  m_StartTransform: {fileID: 0}
+  m_EndTransform: {fileID: 0}
+  m_Activated: 1
+  m_Width: 3.57
+  m_CostModifier: 1
+  m_IsOverridingCost: 0
+  m_Bidirectional: 0
+  m_AutoUpdatePosition: 0
+  m_Area: 0
 --- !u!4 &655561832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1384474863330776490, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
@@ -1129,15 +1162,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564089854882828055, guid: 3e499f2a6d1a4de46a9c3f23ae483862, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47
+      value: 62.25
       objectReference: {fileID: 0}
     - target: {fileID: 4564089854882828055, guid: 3e499f2a6d1a4de46a9c3f23ae483862, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49999997
+      value: 3.42
       objectReference: {fileID: 0}
     - target: {fileID: 4564089854882828055, guid: 3e499f2a6d1a4de46a9c3f23ae483862, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 74.9
+      value: 78.18
       objectReference: {fileID: 0}
     - target: {fileID: 4564089854882828055, guid: 3e499f2a6d1a4de46a9c3f23ae483862, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2144,7 +2177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemyPrefab: {fileID: 4054674970091359157, guid: 8b12d0f7481555f4993432888273b19c, type: 3}
   spawnInterval: 3
-  maxEnemies: 10
+  maxEnemies: 3
 --- !u!1 &1806517039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,6 +2435,56 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 6c53995b05b5bab469a71d3415d8bf70, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &1882337753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882337749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshLink
+  m_SerializedVersion: 1
+  m_AgentTypeID: 0
+  m_StartPoint: {x: -15.0306015, y: 2.8264632, z: 2.2944412}
+  m_EndPoint: {x: -15.069492, y: -0.51017135, z: -3.4798584}
+  m_StartTransform: {fileID: 0}
+  m_EndTransform: {fileID: 0}
+  m_Activated: 1
+  m_Width: 18.8
+  m_CostModifier: 1
+  m_IsOverridingCost: 0
+  m_Bidirectional: 0
+  m_AutoUpdatePosition: 0
+  m_Area: 0
+--- !u!114 &1882337754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882337749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshLink
+  m_SerializedVersion: 1
+  m_AgentTypeID: 0
+  m_StartPoint: {x: 7.6168137, y: 2.5372036, z: 1.885994}
+  m_EndPoint: {x: 7.4496765, y: 0, z: -4.2953415}
+  m_StartTransform: {fileID: 0}
+  m_EndTransform: {fileID: 0}
+  m_Activated: 1
+  m_Width: 17
+  m_CostModifier: 1
+  m_IsOverridingCost: 0
+  m_Bidirectional: 0
+  m_AutoUpdatePosition: 0
+  m_Area: 0
 --- !u!1 &1896633144 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6328452027867288487, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
@@ -2421,7 +2504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemyPrefab: {fileID: 4054674970091359157, guid: 8b12d0f7481555f4993432888273b19c, type: 3}
   spawnInterval: 3
-  maxEnemies: 10
+  maxEnemies: 3
 --- !u!114 &1971436968 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3229055735296596791, guid: 6f015d08422212d4e82f66e10b190eb3, type: 3}
@@ -2643,8 +2726,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1806517041}
   - {fileID: 1827120185}
-  - {fileID: 46940714}
   - {fileID: 1300053379}
   - {fileID: 2118828900}
   - {fileID: 166523288}
   - {fileID: 1067117400}
+  - {fileID: 46940714}
