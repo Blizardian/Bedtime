@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool dodgeTimerIsOn = false;
 
     // Cooldown
+    [Tooltip("This needs to be assigned manually!")]
     public Slider DodgeCoolDownSlider;
     void Start()
     {

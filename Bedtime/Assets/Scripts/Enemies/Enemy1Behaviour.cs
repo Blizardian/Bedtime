@@ -1,6 +1,5 @@
-using UnityEditor.Rendering;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy1Behaviour : MonoBehaviour
 {
@@ -19,6 +18,11 @@ public class Enemy1Behaviour : MonoBehaviour
     [SerializeField] float showRange;
     [SerializeField] float preventExplosionRange;
 
+    //HealthBar
+    [Tooltip("This needs to be assigned manually!")]
+    public Slider healthBar; // Set in the inspector
+    [Tooltip("This needs to be assigned manually!")]
+    public GameObject HealthBarObject; // Set in the inspector
     void Start()
     {
         SetIfZero();
@@ -62,6 +66,8 @@ public class Enemy1Behaviour : MonoBehaviour
 
     void Update()
     {
+        UpdateEnemyHealth();
+
         if (enemy1Health <= 0)
         {
             Destroy(gameObject);
@@ -109,12 +115,19 @@ public class Enemy1Behaviour : MonoBehaviour
             if (distance < showRange)
             {
                 ShowExplodeRangeInGame();
+                HealthBarObject.SetActive(true);
             }
             else
             {
                 showExplodeRange.SetActive(false);
+                HealthBarObject.SetActive(false);
             }
         }
+    }
+
+    private void UpdateEnemyHealth()
+    {
+        healthBar.value = enemy1Health;
     }
 
     /// <summary>

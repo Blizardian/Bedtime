@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class PlayerStats : MonoBehaviour
     public int MaxHP = 100;
 
     // UI
-    public TMP_Text HP_UI_Text;
+    [Tooltip("This needs to be assigned manually!")]
+    public Slider healthBar; // Set in the inspector
     private void Awake()
     {
         SetMaxHealth();
@@ -34,7 +36,7 @@ public class PlayerStats : MonoBehaviour
     {
         HPLimiter();
 
-        HPTextUpdater();
+        HealthUpdater();
 
         HealthChecker();
     }
@@ -53,9 +55,9 @@ public class PlayerStats : MonoBehaviour
     /// <summary>
     /// Updates the HP in the UI
     /// </summary>
-    private void HPTextUpdater()
+    private void HealthUpdater()
     {
-        HP_UI_Text.text = "HP: " + HP; // Update the text
+        healthBar.value = HP; // Update the HP
     }
 
     /// <summary>
