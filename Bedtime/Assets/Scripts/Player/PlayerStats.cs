@@ -11,11 +11,22 @@ public class PlayerStats : MonoBehaviour
     public int HP;
     public int MaxHP = 100;
 
+    // Score related
+    public int playerScore;
+    public int scoreNeededLevel1;
+    //public int scoreNeededLevel2;
+    //public int scoreNeededLevel3;
+    public int levelTracker;
+    [Tooltip("This needs to be assigned manually!")]
+    public TMP_Text scoreText;
+
     // UI
     [Tooltip("This needs to be assigned manually!")]
     public Slider healthBar; // Set in the inspector
     private void Awake()
     {
+        scoreNeededLevel1 = 100;
+        levelTracker = 1;
         SetMaxHealth();
 
         if (Instance != null && Instance != this)
@@ -39,6 +50,10 @@ public class PlayerStats : MonoBehaviour
         HealthUpdater();
 
         HealthChecker();
+
+        CompletedLevel();
+
+        scoreText.text = "Score: " + playerScore + "/ " + scoreNeededLevel1;
     }
 
     /// <summary>
@@ -68,6 +83,20 @@ public class PlayerStats : MonoBehaviour
         if (HP > MaxHP)
         {
             HP = MaxHP;
+        }
+    }
+
+    private void CompletedLevel()
+    {
+        if(playerScore == scoreNeededLevel1)
+        {
+            switch (levelTracker)
+            {
+                case 1:
+                    levelTracker = 2;
+                    playerScore = 0;
+                    break;
+            }
         }
     }
 }

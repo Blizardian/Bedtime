@@ -24,7 +24,7 @@ public class BulletLogic : MonoBehaviour
 
             if (enemy != null)
             {
-                enemy.enemy1Health -= 25;
+                enemy.enemy1Health -= 50;
                 Debug.Log("Damage done");
             }
             Destroy(gameObject); //  Destroy the bullet

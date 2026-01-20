@@ -12,24 +12,30 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating(nameof(SpawnEnemy), 1f, spawnInterval);
+            InvokeRepeating(nameof(SpawnEnemy), 1f, spawnInterval);
+
+
     }
 
     void SpawnEnemy()
     {
-        if (currentEnemyCount >= maxEnemies)
-            return;
-
-        GameObject enemy = Instantiate(enemyPrefab, transform.position, transform.rotation);
-        currentEnemyCount++;
-
-        // Assign target
-        NavTest nav = enemy.GetComponent<NavTest>();
-        if (nav != null)
+        if (PlayerStats.Instance.levelTracker == 1)
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-                nav.target = player.transform;
+            if (currentEnemyCount >= maxEnemies)
+                return;
+
+            GameObject enemy = Instantiate(enemyPrefab, transform.position, transform.rotation);
+            currentEnemyCount++;
+
+            // Assign target
+            NavTest nav = enemy.GetComponent<NavTest>();
+            if (nav != null)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                    nav.target = player.transform;
+            }
         }
+        
     }
 }

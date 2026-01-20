@@ -17,16 +17,19 @@ public class TurretEnemy : MonoBehaviour
     }
     void Update()
     {
-        transform.LookAt(target.transform);
-
-        timer += Time.deltaTime;
-
-        if (timer >= fireRate)
+        if (PlayerStats.Instance.levelTracker == 1)
         {
-            Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+            transform.LookAt(target.transform);
 
-            Debug.Log("Turret Fired Bullet!");
-            timer = 0f;
+            timer += Time.deltaTime;
+
+            if (timer >= fireRate)
+            {
+                Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+
+                Debug.Log("Turret Fired Bullet!");
+                timer = 0f;
+            }
         }
     }
 }

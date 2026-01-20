@@ -79,13 +79,16 @@ public class Enemy1Behaviour : MonoBehaviour
 
     void Update()
     {
+        DestroyAllEnemies();
+
         UpdateEnemyHealth();
 
         if (enemy1Health <= 0)
         {
             SpawnerIntUpdater();
+            PlayerStats.Instance.playerScore += 50;
             Destroy(gameObject);
-            
+
         }
 
         if (target)
@@ -125,7 +128,7 @@ public class Enemy1Behaviour : MonoBehaviour
 
                     SpawnerIntUpdater();
                     Destroy(gameObject);
-                    
+
                 }
             }
 
@@ -138,6 +141,21 @@ public class Enemy1Behaviour : MonoBehaviour
             {
                 showExplodeRange.SetActive(false);
                 HealthBarObject.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Destroys all enemies when level is completed
+    /// </summary>
+    public void DestroyAllEnemies()
+    {
+        if(PlayerStats.Instance.playerScore == PlayerStats.Instance.scoreNeededLevel1) // Needs to be upgraded so that when you are in a new level it still spawns, since now it does not
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy1");
+            foreach (GameObject enemy in enemies)
+            {
+                Destroy(enemy);
             }
         }
     }
