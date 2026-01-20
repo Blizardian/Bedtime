@@ -274,7 +274,8 @@ MonoBehaviour:
   preventExplosionRange: 0
   healthBar: {fileID: 4430089828521473672}
   HealthBarObject: {fileID: 4167673740124931779}
-  spawner: {fileID: 5708732653942536292, guid: 4ded4e0c0de610c46873eee598150a4e, type: 3}
+  spawnL: {fileID: 0}
+  spawnR: {fileID: 0}
 --- !u!114 &3037774768335401185
 MonoBehaviour:
   m_ObjectHideFlags: 0
