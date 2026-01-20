@@ -2353,6 +2353,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 9035173706484364066, guid: 8b12d0f7481555f4993432888273b19c, type: 3}
   spawnInterval: 3
   maxEnemies: 3
+  currentEnemyCount: 0
 --- !u!1 &1806517039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,6 +2681,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 9035173706484364066, guid: 8b12d0f7481555f4993432888273b19c, type: 3}
   spawnInterval: 3
   maxEnemies: 3
+  currentEnemyCount: 0
 --- !u!114 &1971436968 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3229055735296596791, guid: 6f015d08422212d4e82f66e10b190eb3, type: 3}
