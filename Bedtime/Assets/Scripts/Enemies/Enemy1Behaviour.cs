@@ -160,7 +160,7 @@ public class Enemy1Behaviour : MonoBehaviour
         }
     }
 
-    private static void SpawnerIntUpdater()
+    private  void SpawnerIntUpdater()
     {
         spawnerScriptL.currentEnemyCount = spawnerScriptL.currentEnemyCount - 1;
         spawnerScriptR.currentEnemyCount = spawnerScriptR.currentEnemyCount - 1;

@@ -13,8 +13,19 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
             InvokeRepeating(nameof(SpawnEnemy), 1f, spawnInterval);
+    }
 
+    private void Update()
+    {
+        EnemyCountStabilizer();
+    }
 
+    private void EnemyCountStabilizer()
+    {
+        if (currentEnemyCount < 0)
+        {
+            currentEnemyCount = 0;
+        }
     }
 
     void SpawnEnemy()
