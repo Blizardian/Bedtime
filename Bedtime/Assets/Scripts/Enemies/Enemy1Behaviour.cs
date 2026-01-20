@@ -23,8 +23,21 @@ public class Enemy1Behaviour : MonoBehaviour
     public Slider healthBar; // Set in the inspector
     [Tooltip("This needs to be assigned manually!")]
     public GameObject HealthBarObject; // Set in the inspector
+
+    // Other scripts
+    public GameObject spawnL;
+    public static EnemySpawner spawnerScriptL;
+
+    public GameObject spawnR;
+    public static EnemySpawner spawnerScriptR;
     void Start()
     {
+        spawnL = GameObject.Find("Ball pit L");
+        spawnerScriptL = spawnL.GetComponent<EnemySpawner>();
+
+        spawnR = GameObject.Find("Ball pit R");
+        spawnerScriptR = spawnR.GetComponent<EnemySpawner>();
+
         SetIfZero();
 
         // Instantiate a unique circle for this enemy
@@ -70,7 +83,9 @@ public class Enemy1Behaviour : MonoBehaviour
 
         if (enemy1Health <= 0)
         {
+            SpawnerIntUpdater();
             Destroy(gameObject);
+            
         }
 
         if (target)
@@ -108,7 +123,9 @@ public class Enemy1Behaviour : MonoBehaviour
                         Debug.Log("Player will not get damage");
                     }
 
+                    SpawnerIntUpdater();
                     Destroy(gameObject);
+                    
                 }
             }
 
@@ -123,6 +140,12 @@ public class Enemy1Behaviour : MonoBehaviour
                 HealthBarObject.SetActive(false);
             }
         }
+    }
+
+    private static void SpawnerIntUpdater()
+    {
+        spawnerScriptL.currentEnemyCount = spawnerScriptL.currentEnemyCount - 1;
+        spawnerScriptR.currentEnemyCount = spawnerScriptR.currentEnemyCount - 1;
     }
 
     private void UpdateEnemyHealth()

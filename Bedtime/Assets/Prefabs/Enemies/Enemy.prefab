@@ -540,6 +540,7 @@ MonoBehaviour:
   preventExplosionRange: 0
   healthBar: {fileID: 5090233794206913804}
   HealthBarObject: {fileID: 7765503998448375994}
+  spawner: {fileID: 0}
 --- !u!114 &8416203535873039699
 MonoBehaviour:
   m_ObjectHideFlags: 0

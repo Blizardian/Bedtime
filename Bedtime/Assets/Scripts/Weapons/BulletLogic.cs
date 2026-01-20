@@ -7,6 +7,7 @@ public class BulletLogic : MonoBehaviour
 
     // Rigidbody
     private Rigidbody rb;
+    public static EnemySpawner spawnerScriptR;
     void Start()
     {
         bulletSpeed = 60f; // Sets the bullet speed
@@ -32,6 +33,5 @@ public class BulletLogic : MonoBehaviour
 
         Destroy(gameObject); Destroy(gameObject); //  Destroy the bullet
         Debug.Log("Hitting anything");
-
     }
 }
