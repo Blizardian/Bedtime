@@ -31,7 +31,7 @@ public class ShootMechanic : MonoBehaviour
     {
         timerLimit = 3; //  Sets the timer limit
 
-        spawnPosition = Camera.transform.Find("BulletSpawn"); // Sets the spawn position
+        spawnPosition = GameObject.Find("BulletSpawn").transform; // Sets the spawn position
 
         //totalAmmoAmmount = 45; // Sets the total ammount of ammo
         maxAmmo = 15; // Sets the max ammo for the gun (1 magazine)
@@ -41,7 +41,7 @@ public class ShootMechanic : MonoBehaviour
         ReloadCooldownTimer();
 
         weaponPickup = GameObject.Find("WeaponPickup");
-        weaponPlayer = GameObject.Find("BulletSpawn");
+        weaponPlayer = GameObject.Find("Watergun"); 
         weaponUI = GameObject.Find("WeaponStats");
 
         DisableWeapon();

@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretPrototype (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5155854674375487429, guid: 40a814df5ee67cf40b236fb3283ce0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -802,6 +806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretPrototype (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5155854674375487429, guid: 40a814df5ee67cf40b236fb3283ce0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1222,6 +1230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretPrototype (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5155854674375487429, guid: 40a814df5ee67cf40b236fb3283ce0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1453,6 +1465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretPrototype (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5155854674375487429, guid: 40a814df5ee67cf40b236fb3283ce0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1622,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretPrototype (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5155854674375487429, guid: 40a814df5ee67cf40b236fb3283ce0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1684,6 +1704,11 @@ Transform:
   - {fileID: 1108907148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1439355206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7881628919532104957, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+  m_PrefabInstance: {fileID: 2118828900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1490384983 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1401168873633493066, guid: 6f015d08422212d4e82f66e10b190eb3, type: 3}
@@ -1822,6 +1847,10 @@ PrefabInstance:
     - target: {fileID: 5155854674375487429, guid: 40a814df5ee67cf40b236fb3283ce0a1, type: 3}
       propertyPath: m_Name
       value: TurretPrototype
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155854674375487429, guid: 40a814df5ee67cf40b236fb3283ce0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2899,7 +2928,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 6c53995b05b5bab469a71d3415d8bf70, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 0f3efdfde99447c42a120812cf6723e2, type: 2}
   m_BuildHeightMesh: 0
 --- !u!114 &1882337753
 MonoBehaviour:
@@ -2972,6 +3001,11 @@ MonoBehaviour:
   spawnInterval: 3
   maxEnemies: 3
   currentEnemyCount: 0
+--- !u!4 &1931830501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3544839682364834586, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+  m_PrefabInstance: {fileID: 2118828900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1971436968 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3229055735296596791, guid: 6f015d08422212d4e82f66e10b190eb3, type: 3}
@@ -3111,6 +3145,14 @@ PrefabInstance:
       propertyPath: weaponUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2221166297145792430, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+      propertyPath: weaponPlayer
+      value: 
+      objectReference: {fileID: 1439355206}
+    - target: {fileID: 2221166297145792430, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+      propertyPath: spawnPosition
+      value: 
+      objectReference: {fileID: 1931830501}
     - target: {fileID: 2221166297145792430, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
       propertyPath: AmmountOfAmmoText
       value: 
