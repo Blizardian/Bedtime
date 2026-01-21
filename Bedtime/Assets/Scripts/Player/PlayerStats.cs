@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Awake()
     {
-        scoreNeededLevel1 = 100;
+        scoreNeededLevel1 = 600;
         levelTracker = 1;
         SetMaxHealth();
 
