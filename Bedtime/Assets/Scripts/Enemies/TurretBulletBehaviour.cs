@@ -3,7 +3,7 @@ using UnityEngine;
 public class TurretBulletBehaviour : MonoBehaviour
 {
     public GameObject target;
-    public float bulletSpeed;
+    [SerializeField] private float bulletSpeed;
 
     private Rigidbody rb;
 
@@ -29,9 +29,8 @@ public class TurretBulletBehaviour : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                PlayerStats.Instance.HP -= 20;
+                PlayerStats.Instance.HP -= 20; // Player receives damage
             }
-
             Debug.Log("Bullet Destroyed");
             Destroy(gameObject);
         }

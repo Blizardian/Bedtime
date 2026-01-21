@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Singleton Related
+    public static PlayerMovement Instance;
+
     // Movement Related
     [SerializeField] private float movementSpeed;
     [SerializeField] private float originalMovementSpeed;
@@ -33,6 +36,14 @@ public class PlayerMovement : MonoBehaviour
     public Slider DodgeCoolDownSlider;
     void Start()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
         rb = GetComponent<Rigidbody>();
 
         AssignForgottenAtStart();
@@ -43,10 +54,19 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Locks the cursor and makes it not visible for the player
     /// </summary>
-    private static void LockCursor()
+    public void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    /// <summary>
+    /// Unlock The cursor
+    /// </summary>
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Update()

@@ -8,6 +8,7 @@ TagManager:
   - HealthPickup
   - Enemy1
   - Watergun
+  - TurretLevel1
   layers:
   - Default
   - TransparentFX

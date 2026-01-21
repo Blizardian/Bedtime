@@ -1,5 +1,7 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.LowLevel;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
@@ -23,6 +25,7 @@ public class PlayerStats : MonoBehaviour
     // UI
     [Tooltip("This needs to be assigned manually!")]
     public Slider healthBar; // Set in the inspector
+
     private void Awake()
     {
         scoreNeededLevel1 = 100;
@@ -36,11 +39,6 @@ public class PlayerStats : MonoBehaviour
         }
 
         Instance = this;
-    }
-
-    private void SetMaxHealth()
-    {
-        HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start"); // Ensures the HP is full at the start
     }
 
     void Update()
@@ -64,6 +62,8 @@ public class PlayerStats : MonoBehaviour
         if (HP <= 0)
         {
             Debug.Log("Player has died");
+            ButtonMethods.conditionText = "You lost!";
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -86,6 +86,16 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets the HP of the player to the MaxHP value (So the player gets fully healed)
+    /// </summary>
+    private void SetMaxHealth()
+    {
+        HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start"); // Ensures the HP is full at the start
+    }
+    /// <summary>
+    /// Marks the level as completed
+    /// </summary>
     private void CompletedLevel()
     {
         if(playerScore == scoreNeededLevel1)
@@ -95,6 +105,8 @@ public class PlayerStats : MonoBehaviour
                 case 1:
                     levelTracker = 2;
                     playerScore = 0;
+                    ButtonMethods.conditionText = "You Won!";
+                    SceneManager.LoadScene(1);
                     break;
             }
         }

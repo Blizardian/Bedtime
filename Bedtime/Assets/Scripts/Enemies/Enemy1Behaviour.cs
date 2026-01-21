@@ -160,6 +160,9 @@ public class Enemy1Behaviour : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Updates the spawner when a enemy gets killed
+    /// </summary>
     private  void SpawnerIntUpdater()
     {
         spawnerScriptL.currentEnemyCount = spawnerScriptL.currentEnemyCount - 1;
@@ -194,7 +197,7 @@ public class Enemy1Behaviour : MonoBehaviour
             explodeTimer = 0;
         }
     }
-
+    // Draws gizmo in the scene, so you can see the range of the explosion and the range in when the explosion is deactivated
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red; // Changes the color

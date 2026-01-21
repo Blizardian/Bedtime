@@ -27,7 +27,6 @@ public class ShootMechanic : MonoBehaviour
     public GameObject weaponPickup;
     public GameObject weaponPlayer;
     public GameObject weaponUI;
-
     void Start()
     {
         timerLimit = 3; //  Sets the timer limit
@@ -49,25 +48,6 @@ public class ShootMechanic : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Disables the weapon and UI for the weapon
-    /// </summary>
-    private void DisableWeapon()
-    {
-        weaponPlayer.SetActive(false); // Set the gun inactive
-        weaponUI.SetActive(false); // Disable the weaponUI
-    }
-
-    //Sets forgotten values at the start
-    private void AssignForgottenAtStart()
-    {
-        if (Camera == null)
-        {
-            Camera = GameObject.Find("Main Camera");
-            Debug.Log("INFO: Player has been automatically set");
-        }
-    }
-
     void Update()
     {
         if (hasWeapon)
@@ -86,6 +66,27 @@ public class ShootMechanic : MonoBehaviour
             EnablePlayerGun();
         }
 
+    }
+
+    /// <summary>
+    /// Disables the weapon and UI for the weapon
+    /// </summary>
+    private void DisableWeapon()
+    {
+        weaponPlayer.SetActive(false); // Set the gun inactive
+        weaponUI.SetActive(false); // Disable the weaponUI
+    }
+
+    /// <summary>
+    /// Sets forgotten values at the start
+    /// </summary>
+    private void AssignForgottenAtStart()
+    {
+        if (Camera == null)
+        {
+            Camera = GameObject.Find("Main Camera");
+            Debug.Log("INFO: Player has been automatically set");
+        }
     }
 
 

@@ -12,14 +12,14 @@ public class TurretEnemy : MonoBehaviour
 
     private void Awake()
     {
-        fireRate = Random.Range(3, 8);
+        fireRate = Random.Range(2, 10); // Fire rate will be random per turret (Between the 2 values)
         target = GameObject.Find("Player");
     }
     void Update()
     {
-        if (PlayerStats.Instance.levelTracker == 1)
+        if (PlayerStats.Instance.levelTracker == 1 && gameObject.CompareTag("TurretLevel1"))
         {
-            transform.LookAt(target.transform);
+            transform.LookAt(target.transform); // Always look at the player
 
             timer += Time.deltaTime;
 
