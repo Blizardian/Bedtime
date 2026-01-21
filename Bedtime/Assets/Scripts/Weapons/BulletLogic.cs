@@ -31,6 +31,13 @@ public class BulletLogic : MonoBehaviour
             return;
         }
 
+        if (collision.gameObject.CompareTag("MeleeEnemy"))
+        {
+            MeleeEnemy.HP -= 20;
+            Destroy(gameObject); //  Destroy the bullet
+            return;
+        }
+
         Destroy(gameObject); Destroy(gameObject); //  Destroy the bullet
         Debug.Log("Hitting anything");
     }

@@ -9,6 +9,7 @@ TagManager:
   - Enemy1
   - Watergun
   - TurretLevel1
+  - MeleeEnemy
   layers:
   - Default
   - TransparentFX
