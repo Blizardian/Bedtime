@@ -2,22 +2,34 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner Instance;
+
     public GameObject enemyPrefab;
     public float spawnInterval = 3f;
 
     [Header("Global Enemy Limit")]
-    public int maxEnemies = 10;
+    public static int maxEnemies = 10;
 
-    public  int currentEnemyCount = 0;
+    public static int currentEnemyCount = 0;
 
     void Start()
     {
             InvokeRepeating(nameof(SpawnEnemy), 1f, spawnInterval);
+
+        currentEnemyCount = 0;
     }
 
     private void Update()
     {
         EnemyCountStabilizer();
+
+        Debug.Log("Current" + currentEnemyCount);
+        Debug.Log("Max" + maxEnemies);
+    }
+
+    public void ResetCurrentEnemyCount()
+    {
+        currentEnemyCount = 0;
     }
 
     private void EnemyCountStabilizer()
@@ -47,6 +59,5 @@ public class EnemySpawner : MonoBehaviour
                     nav.target = player.transform;
             }
         }
-        
     }
 }

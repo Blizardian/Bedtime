@@ -79,6 +79,7 @@ public class Enemy1Behaviour : MonoBehaviour
 
     void Update()
     {
+
         DestroyAllEnemies();
 
         UpdateEnemyHealth();
@@ -165,8 +166,7 @@ public class Enemy1Behaviour : MonoBehaviour
     /// </summary>
     private  void SpawnerIntUpdater()
     {
-        spawnerScriptL.currentEnemyCount = spawnerScriptL.currentEnemyCount - 1;
-        spawnerScriptR.currentEnemyCount = spawnerScriptR.currentEnemyCount - 1;
+        EnemySpawner.currentEnemyCount--;
     }
 
     private void UpdateEnemyHealth()
