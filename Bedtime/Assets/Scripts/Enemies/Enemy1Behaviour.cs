@@ -25,24 +25,17 @@ public class Enemy1Behaviour : MonoBehaviour
     public GameObject HealthBarObject; // Set in the inspector
 
     // Other scripts
-    public GameObject spawnL;
-    public static EnemySpawner spawnerScriptL;
-
-    public GameObject spawnR;
-    public static EnemySpawner spawnerScriptR;
+    public GameObject SpawnerPart;
+    public static EnemySpawner spawnerScript;
     void Start()
     {
-        spawnL = GameObject.Find("Ball pit L");
-        spawnerScriptL = spawnL.GetComponent<EnemySpawner>();
-
-        spawnR = GameObject.Find("Ball pit R");
-        spawnerScriptR = spawnR.GetComponent<EnemySpawner>();
+        SpawnerPart = GameObject.Find("Ball pit L");
+        spawnerScript = SpawnerPart.GetComponent<EnemySpawner>();
 
         SetIfZero();
 
-        // Instantiate a unique circle for this enemy
-        showExplodeRange = Instantiate(explodeRangePrefab, transform.position, Quaternion.identity);
-        showExplodeRange.transform.SetParent(transform); // So it moves with the enemy
+        showExplodeRange = Instantiate(explodeRangePrefab, transform.position, Quaternion.identity); // Instantiate a unique circle for this enemy
+        showExplodeRange.transform.SetParent(transform); // So it sets it as a parent and moves with the enemy
     }
 
     /// <summary>
@@ -50,30 +43,30 @@ public class Enemy1Behaviour : MonoBehaviour
     /// </summary>
     private void SetIfZero()
     {
-        if (explodeTimer == 0)
+        if (explodeTimerMax == 0) // Sets the explodeTimerMax if it hasn't been set
         {
-            explodeTimerMax = 1;
+            explodeTimerMax = 1; // Sets the value
         }
-        if (showRange == 0)
+        if (showRange == 0) // Sets the showRange if it hasn't been set
         {
-            showRange = 8;
+            showRange = 8; // Sets the value
         }
-        if (explodeTimer == 0)
+        if (explodeRange == 0) // Sets the explodeRange if it hasn't been set
         {
-            explodeRange = 3;
-        }
-
-        if (target == null)
-        {
-            target = GameObject.FindWithTag("Player").transform;
+            explodeRange = 3; // Sets the value
         }
 
-        if (enemy1Health == 0)
+        if (target == null) // If the target is not set
         {
-            enemy1Health = 100;
+            target = GameObject.FindWithTag("Player").transform; // Sets the target tot the player
         }
 
-        preventExplosionRange = 6;
+        if (enemy1Health == 0) // Sets the health if it has not been set
+        {
+            enemy1Health = 100; // Healt is set to a value
+        }
+
+        preventExplosionRange = 6; // Sets the range for when the explosion gets canceled.
 
     }
 
@@ -84,17 +77,17 @@ public class Enemy1Behaviour : MonoBehaviour
 
         UpdateEnemyHealth();
 
-        if (enemy1Health <= 0)
+        if (enemy1Health <= 0) // When the health is less or equal to 0
         {
             SpawnerIntUpdater();
-            PlayerStats.Instance.playerScore += 50;
+            PlayerStats.Instance.playerScore += PlayerStats.Instance.scoreReceivedOnKill; // Adds a score when this enemy dies
             Destroy(gameObject);
 
         }
 
-        if (target)
+        if (target) // If there is a target
         {
-            float distance = Vector3.Distance(target.position, transform.position);
+            float distance = Vector3.Distance(target.position, transform.position); // Calculate the distance between the player and the agent
 
             if (distance < explodeRange)
             {
@@ -166,12 +159,12 @@ public class Enemy1Behaviour : MonoBehaviour
     /// </summary>
     private  void SpawnerIntUpdater()
     {
-        EnemySpawner.currentEnemyCount--;
+        EnemySpawner.currentEnemyCount--; // Updates the current enemy count with one less
     }
 
     private void UpdateEnemyHealth()
     {
-        healthBar.value = enemy1Health;
+        healthBar.value = enemy1Health; // Sets the slider to the to ammount of the health (This updates the HP bar)
     }
 
     /// <summary>

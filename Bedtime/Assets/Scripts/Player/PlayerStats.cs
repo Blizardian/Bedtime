@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
 
     // Score related
     public int playerScore;
+    public int scoreReceivedOnKill;
     public int scoreNeededLevel1;
     //public int scoreNeededLevel2;
     //public int scoreNeededLevel3;
@@ -28,7 +29,8 @@ public class PlayerStats : MonoBehaviour
 
     private void Awake()
     {
-        scoreNeededLevel1 = 600;
+        scoreReceivedOnKill = 50;
+        scoreNeededLevel1 = 1000;
         levelTracker = 1;
         SetMaxHealth();
 
@@ -51,7 +53,15 @@ public class PlayerStats : MonoBehaviour
 
         CompletedLevel();
 
-        scoreText.text = "Score: " + playerScore + "/ " + scoreNeededLevel1;
+        ShowScoreLevel1();
+    }
+
+    /// <summary>
+    /// Shows the score and score needed for level 1
+    /// </summary>
+    private void ShowScoreLevel1()
+    {
+        scoreText.text = "Score: " + playerScore + "/ " + scoreNeededLevel1; // Updates the scoreText with the player's score and the score that is needed
     }
 
     /// <summary>

@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawnerMelee : MonoBehaviour
 {
-    public static EnemySpawner Instance;
+    public static EnemySpawnerMelee Instance;
 
     public GameObject enemyPrefab;
     public float spawnInterval = 3f;
 
     [Header("Global Enemy Limit")]
-    public static int maxEnemies = 10;
+    public static int maxEnemies = 4;
 
     public static int currentEnemyCount = 0;
 

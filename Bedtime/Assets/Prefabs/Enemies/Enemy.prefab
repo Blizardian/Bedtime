@@ -505,7 +505,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 6
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -540,7 +540,7 @@ MonoBehaviour:
   preventExplosionRange: 0
   healthBar: {fileID: 5090233794206913804}
   HealthBarObject: {fileID: 7765503998448375994}
-  spawner: {fileID: 0}
+  SpawnerPart: {fileID: 0}
 --- !u!114 &8416203535873039699
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class TurretEnemy : MonoBehaviour
 
     [SerializeField] private float fireRate;
     private float timer;
+    private float resetTimer = 0;
 
     private void Awake()
     {
@@ -21,14 +22,14 @@ public class TurretEnemy : MonoBehaviour
         {
             transform.LookAt(target.transform); // Always look at the player
 
-            timer += Time.deltaTime;
+            timer += Time.deltaTime; // timer's value will increment with time
 
             if (timer >= fireRate)
             {
-                Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+                Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation); // Spawn the bullet at the right position and rotation
 
                 Debug.Log("Turret Fired Bullet!");
-                timer = 0f;
+                timer = resetTimer; // Resets the timer
             }
         }
     }
