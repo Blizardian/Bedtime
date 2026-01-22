@@ -15,10 +15,10 @@ public class TurretBulletBehaviour : MonoBehaviour
         }
 
         rb = GetComponent<Rigidbody>();
-        target = GameObject.Find("Player");
+        target = GameObject.Find("Player"); // target is set to the Player
 
-        Vector3 direction = (target.transform.position - transform.position).normalized;
-        rb.linearVelocity = direction * bulletSpeed;
+        Vector3 direction = (target.transform.position - transform.position).normalized; // Determine the direction
+        rb.linearVelocity = direction * bulletSpeed; // The bullet will go to the direction with the speed of the bulletSpeed variable
 
         Destroy(gameObject, 5f); // After 5 seconds destroy if nothing was hit
     }

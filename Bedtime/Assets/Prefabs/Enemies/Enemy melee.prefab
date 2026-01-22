@@ -86,10 +86,10 @@ GameObject:
   - component: {fileID: 7080943433465614631}
   - component: {fileID: 4779605666635029051}
   - component: {fileID: 17902993910538468}
-  - component: {fileID: 9103566258258114804}
   - component: {fileID: 622321647275773133}
   - component: {fileID: 9050058023346137037}
   - component: {fileID: 3563657037341510454}
+  - component: {fileID: 8690664531940818134}
   m_Layer: 0
   m_Name: Enemy melee
   m_TagString: MeleeEnemy
@@ -170,19 +170,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9103566258258114804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703474085065200031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a67d7891a59509443a0a2fdb69ad93a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NavTest
-  target: {fileID: 0}
 --- !u!114 &622321647275773133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +186,7 @@ MonoBehaviour:
   player: {fileID: 0}
   attackCooldown: 1.5
   healthBar: {fileID: 4363929515491930845}
-  healthBarObject: {fileID: 0}
+  healthBarObject: {fileID: 5469294425922951819}
   maxHP: 0
   showRange: 0
 --- !u!136 &9050058023346137037
@@ -247,6 +234,19 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8690664531940818134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703474085065200031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb16669cdde65e1498b345c6e3354919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavMeshEnemy
+  target: {fileID: 0}
 --- !u!1 &3055346601566273281
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,9 +366,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

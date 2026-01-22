@@ -33,8 +33,15 @@ public class BulletLogic : MonoBehaviour
 
         if (collision.gameObject.CompareTag("MeleeEnemy"))
         {
-            MeleeEnemy.HP -= 20;
-            Destroy(gameObject); //  Destroy the bullet
+            MeleeEnemy enemy = collision.gameObject.GetComponent<MeleeEnemy>();
+
+            if (enemy != null)
+            {
+                enemy.HP -= 25;
+                Debug.Log("Melee enemy hit");
+            }
+
+            Destroy(gameObject);
             return;
         }
 
