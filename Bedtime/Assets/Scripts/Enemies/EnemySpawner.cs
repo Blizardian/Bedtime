@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 3f;
 
     [Header("Global Enemy Limit")]
-    public static int maxEnemies = 10;
+    public static int maxEnemies = 6;
 
     public static int currentEnemyCount = 0;
 

@@ -8,7 +8,7 @@ public class EnemySpawnerMelee : MonoBehaviour
     public float spawnInterval = 3f;
 
     [Header("Global Enemy Limit")]
-    public static int maxEnemies = 4;
+    public static int maxEnemies = 2;
 
     public static int currentEnemyCount = 0;
 
