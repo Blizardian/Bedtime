@@ -3,10 +3,13 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Singleton Related
+    public static PlayerMovement Instance;
+
     // Movement Related
     [SerializeField] private float movementSpeed;
     [SerializeField] private float originalMovementSpeed;
-    [SerializeField] private bool onGround;
+    public bool onGround;
 
     // For the inspector
     public GameObject Player;
@@ -29,15 +32,41 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool dodgeTimerIsOn = false;
 
     // Cooldown
+    [Tooltip("This needs to be assigned manually!")]
     public Slider DodgeCoolDownSlider;
     void Start()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
         rb = GetComponent<Rigidbody>();
 
         AssignForgottenAtStart();
 
+        LockCursor();
+    }
+
+    /// <summary>
+    /// Locks the cursor and makes it not visible for the player
+    /// </summary>
+    public void LockCursor()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    /// <summary>
+    /// Unlock The cursor
+    /// </summary>
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Update()
@@ -57,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         float MouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         float MouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        transform.Rotate(Vector3.up * MouseX);
+        transform.Rotate(Vector3.up * MouseX); // Look left and right
 
         xRotation -= MouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
@@ -84,6 +113,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Player can dodge in a direction with LeftShift
+    /// </summary>
     public void DodgeLogic()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && dodgeTimerIsOn == false)
@@ -115,6 +147,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Contains the logic for the timer of the dogde
+    /// </summary>
     private void DodgeTimerLogic()
     {
         // Timer
@@ -204,10 +239,16 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("INFO: Camera has already been set manually");
         }
     }
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        onGround = true;
-        Debug.Log("Player is on the ground");
+        foreach (ContactPoint contact in collision.contacts) // Checks ContactPoint of the object it collides with
+        {
+            if (contact.normal.y > 0.5f) // Checks if the contact point is mostly flat
+            {
+                onGround = true;
+                return;
+            }
+        }
     }
 
     public void OnCollisionExit(Collision collision)

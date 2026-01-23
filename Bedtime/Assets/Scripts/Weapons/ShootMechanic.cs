@@ -22,19 +22,64 @@ public class ShootMechanic : MonoBehaviour
     //[Range(0, 1000)][SerializeField] private int totalAmmoAmmount;
     [SerializeField] private int maxAmmo;
 
+    // Weapon related
+    public bool hasWeapon;
+    public GameObject weaponPickup;
+    public GameObject weaponPlayer;
+    public GameObject weaponUI;
     void Start()
     {
-        timerLimit = 3;
+        timerLimit = 3; //  Sets the timer limit
 
-        spawnPosition = Camera.transform.Find("BulletSpawn");
-        //totalAmmoAmmount = 45;
-        maxAmmo = 15;
-        ammoInWeapon = maxAmmo;
+        spawnPosition = GameObject.Find("BulletSpawn").transform; // Sets the spawn position
+
+        //totalAmmoAmmount = 45; // Sets the total ammount of ammo
+        maxAmmo = 15; // Sets the max ammo for the gun (1 magazine)
+        ammoInWeapon = maxAmmo; // Sets the ammo for the weapon equal to the max ammo, so you begin with a full clip
 
         AssignForgottenAtStart();
         ReloadCooldownTimer();
 
+        weaponPickup = GameObject.Find("WeaponPickup");
+        weaponPlayer = GameObject.Find("Watergun"); 
+        weaponUI = GameObject.Find("WeaponStats");
+
+        DisableWeapon();
+
     }
+
+    void Update()
+    {
+        if (hasWeapon)
+        {
+            if (timerIsOn == true)
+            {
+                Reload();
+            }
+
+            Shooting();
+
+            RunTimerReload();
+
+            ShowAmmoInWeapon();
+
+            EnablePlayerGun();
+        }
+
+    }
+
+    /// <summary>
+    /// Disables the weapon and UI for the weapon
+    /// </summary>
+    private void DisableWeapon()
+    {
+        weaponPlayer.SetActive(false); // Set the gun inactive
+        weaponUI.SetActive(false); // Disable the weaponUI
+    }
+
+    /// <summary>
+    /// Sets forgotten values at the start
+    /// </summary>
     private void AssignForgottenAtStart()
     {
         if (Camera == null)
@@ -44,18 +89,14 @@ public class ShootMechanic : MonoBehaviour
         }
     }
 
-    void Update()
+
+    /// <summary>
+    /// Enables the gun and UI of the gun
+    /// </summary>
+    private void EnablePlayerGun()
     {
-        if (timerIsOn == true)
-        {
-            Reload();
-        }
-
-        Shooting();
-
-        RunTimerReload();
-
-        ShowAmmoInWeapon();
+        weaponPlayer.SetActive(true);
+        weaponUI.SetActive(true);
     }
 
     /// <summary>
@@ -72,7 +113,7 @@ public class ShootMechanic : MonoBehaviour
     private void RunTimerReload()
     {
         //Reload Mechanic if we have infinite ammo
-        if (Input.GetKeyDown(KeyCode.R) && timerIsOn == false)
+        if (Input.GetKeyDown(KeyCode.R) && timerIsOn == false && ammoInWeapon != 15)
         {
             timerIsOn = true;
         }
@@ -133,6 +174,15 @@ public class ShootMechanic : MonoBehaviour
         if (timerIsOn == true)
         {
             ReloadCooldownSlider.value = timer;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Watergun"))
+        {
+            hasWeapon = true;
+            Destroy(collision.gameObject);
         }
     }
 }
