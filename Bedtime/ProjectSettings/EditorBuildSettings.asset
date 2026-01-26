@@ -5,14 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/TestLuke.unity
-    guid: 02429da8d5e825c46879c44ac6fbb147
   - enabled: 1
-    path: Assets/Scenes/Playtest1/Prototype.unity
-    guid: 5f428c06417817a46bf0450b8326e6ce
+    path: Assets/Scenes/Menu/Main Menu.unity
+    guid: 073708aa441384149ba68c424cac486d
   - enabled: 1
-    path: Assets/Scenes/WinOrLoseScene.unity
+    path: Assets/Scenes/Luke/WorkSceneLuke.unity
+    guid: 31a906ae64fd59b42b4691c1dfb9f8dc
+  - enabled: 1
+    path: Assets/Scenes/Menu/WinOrLoseScene.unity
     guid: e17f08ab3354afb449b9af5eb0276eda
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

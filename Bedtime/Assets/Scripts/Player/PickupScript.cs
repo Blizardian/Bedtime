@@ -33,6 +33,7 @@ public class PickupScript : MonoBehaviour
         if (collision.gameObject.CompareTag("HealthPickup"))
         {
             PlayerStats.Instance.HP += 25;
+            UIManager.Instance.ShowHealIndicator(); // Notify the player that he received health
             Destroy(collision.gameObject);
         }
     }
