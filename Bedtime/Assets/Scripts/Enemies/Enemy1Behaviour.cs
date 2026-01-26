@@ -114,6 +114,7 @@ public class Enemy1Behaviour : MonoBehaviour
                     {
                         Debug.Log("Player will get damage");
                         PlayerStats.Instance.HP -= 50;
+                        UIManager.Instance.ShowHitIndicator(); // Notify the player that he received damage
                     }
                     else
                     {

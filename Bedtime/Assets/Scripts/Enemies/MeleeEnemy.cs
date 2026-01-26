@@ -73,6 +73,7 @@ public class MeleeEnemy : MonoBehaviour
     void DamagePlayer()
     {
         PlayerStats.Instance.HP -= 25;
+        UIManager.Instance.ShowHitIndicator(); // Notify the player that he received damage
         Debug.Log("Player hit!");
     }
 

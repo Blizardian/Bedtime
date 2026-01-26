@@ -30,6 +30,7 @@ public class TurretBulletBehaviour : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 PlayerStats.Instance.HP -= 20; // Player receives damage
+                UIManager.Instance.ShowHitIndicator(); // Notify the player that he received damage
             }
             Debug.Log("Bullet Destroyed");
             Destroy(gameObject);
