@@ -541,6 +541,7 @@ MonoBehaviour:
   healthBar: {fileID: 5090233794206913804}
   HealthBarObject: {fileID: 7765503998448375994}
   SpawnerPart: {fileID: 0}
+  explosionEffect: {fileID: 3680142250904156040, guid: d88a7d45834b1a7409d0175f71859d4d, type: 3}
 --- !u!114 &8416203535873039699
 MonoBehaviour:
   m_ObjectHideFlags: 0

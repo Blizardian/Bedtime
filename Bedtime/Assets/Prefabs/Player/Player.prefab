@@ -390,8 +390,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4955651389519657843}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.017899664, y: -0, z: -0, w: 0.99983984}
-  m_LocalPosition: {x: -35.5, y: 106.8, z: 287.4}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.4, y: 106.8, z: 290.4}
   m_LocalScale: {x: 13.407035, y: 16.40056, z: 12.976849}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -747,6 +747,7 @@ MonoBehaviour:
   weaponPickup: {fileID: 0}
   weaponPlayer: {fileID: 0}
   weaponUI: {fileID: 0}
+  gunFire: {fileID: 3680142250904156040, guid: cfecacdeabe104d43b4af8df562cc766, type: 3}
 --- !u!114 &8689343817144183944
 MonoBehaviour:
   m_ObjectHideFlags: 0

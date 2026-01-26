@@ -27,6 +27,7 @@ public class ShootMechanic : MonoBehaviour
     public GameObject weaponPickup;
     public GameObject weaponPlayer;
     public GameObject weaponUI;
+    public GameObject gunFire;
     void Start()
     {
         timerLimit = 3; //  Sets the timer limit
@@ -135,6 +136,7 @@ public class ShootMechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && ammoInWeapon >= 1 && timerIsOn == false)
         {
             ammoInWeapon--;
+            Instantiate(gunFire, spawnPosition.position, spawnPosition.rotation, spawnPosition);
             GameObject newBullet = Instantiate(bullet, spawnPosition.position, spawnPosition.rotation);
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && ammoInWeapon <= 0)
