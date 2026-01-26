@@ -8,6 +8,10 @@ public class BulletLogic : MonoBehaviour
     // Rigidbody
     private Rigidbody rb;
     public static EnemySpawner spawnerScriptR;
+
+
+    // Effect
+    public GameObject bloodEffect;
     void Start()
     {
         bulletSpeed = 60f; // Sets the bullet speed
@@ -25,6 +29,7 @@ public class BulletLogic : MonoBehaviour
             if (enemy != null)
             {
                 enemy.enemy1Health -= 50;
+                Instantiate(bloodEffect,collision.gameObject.transform.position, collision.gameObject.transform.rotation); // blood effect
                 Debug.Log("Damage done");
             }
             Destroy(gameObject); //  Destroy the bullet
@@ -38,6 +43,7 @@ public class BulletLogic : MonoBehaviour
             if (enemy != null)
             {
                 enemy.HP -= 25;
+                Instantiate(bloodEffect, collision.gameObject.transform.position, collision.gameObject.transform.rotation); // blood effect
                 Debug.Log("Melee enemy hit");
             }
 

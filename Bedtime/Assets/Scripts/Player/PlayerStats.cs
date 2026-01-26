@@ -115,7 +115,7 @@ public class PlayerStats : MonoBehaviour
                     levelTracker = 2;
                     playerScore = 0;
                     ButtonMethods.conditionText = "You Won!";
-                    SceneManager.LoadScene(1);
+                    SceneManager.LoadScene(2);
                     break;
             }
         }

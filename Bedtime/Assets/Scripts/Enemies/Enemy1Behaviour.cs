@@ -27,6 +27,10 @@ public class Enemy1Behaviour : MonoBehaviour
     // Other scripts
     public GameObject SpawnerPart;
     public static EnemySpawner spawnerScript;
+
+    // Partical
+    [Tooltip("This needs to be assigned manually!")]
+    public GameObject explosionEffect;
     void Start()
     {
         SpawnerPart = GameObject.Find("Ball pit L");
@@ -66,8 +70,10 @@ public class Enemy1Behaviour : MonoBehaviour
             enemy1Health = 100; // Healt is set to a value
         }
 
-        preventExplosionRange = 6; // Sets the range for when the explosion gets canceled.
-
+        if(preventExplosionRange == 0)
+        {
+            preventExplosionRange = 8; // Sets the range for when the explosion gets canceled.
+        }
     }
 
     void Update()
@@ -122,6 +128,7 @@ public class Enemy1Behaviour : MonoBehaviour
                     }
 
                     SpawnerIntUpdater();
+                    Instantiate(explosionEffect, transform.position,transform.rotation);
                     Destroy(gameObject);
 
                 }

@@ -747,6 +747,7 @@ MonoBehaviour:
   weaponPickup: {fileID: 0}
   weaponPlayer: {fileID: 0}
   weaponUI: {fileID: 0}
+  gunFire: {fileID: 3680142250904156040, guid: cfecacdeabe104d43b4af8df562cc766, type: 3}
 --- !u!114 &8689343817144183944
 MonoBehaviour:
   m_ObjectHideFlags: 0
