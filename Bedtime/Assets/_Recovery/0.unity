@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 473729791317386181, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1265175604008733114, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
       propertyPath: m_Name
       value: rooms
@@ -361,6 +365,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150001440668954861, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328452027867288487, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6414559188208739725, guid: 646bfacdd5a66d6498bfd5d6ee6d1a8d, type: 3}
@@ -1857,7 +1865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1112669566
 Transform:
   m_ObjectHideFlags: 0
@@ -3097,7 +3105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1797768449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3270,7 +3278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1815387635
 MonoBehaviour:
   m_ObjectHideFlags: 0
