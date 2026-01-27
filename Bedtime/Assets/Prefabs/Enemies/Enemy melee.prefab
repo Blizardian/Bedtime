@@ -187,6 +187,7 @@ MonoBehaviour:
   attackCooldown: 1.5
   healthBar: {fileID: 4363929515491930845}
   healthBarObject: {fileID: 5469294425922951819}
+  HP: 0
   maxHP: 0
   showRange: 0
 --- !u!136 &9050058023346137037
@@ -293,6 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4051450811856070658}
   - component: {fileID: 4363929515491930845}
+  - component: {fileID: 3003962362261670175}
   m_Layer: 5
   m_Name: HealthBarMelee
   m_TagString: Untagged
@@ -372,6 +374,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3003962362261670175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5469294425922951819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81d1da2276e94641846667d1b5a9c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UILookAtPlayer
+  target: {fileID: 0}
 --- !u!1 &5767067394338366922
 GameObject:
   m_ObjectHideFlags: 0

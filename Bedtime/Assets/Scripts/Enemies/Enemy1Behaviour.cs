@@ -79,7 +79,7 @@ public class Enemy1Behaviour : MonoBehaviour
     void Update()
     {
 
-        DestroyAllEnemies();
+        // DestroyAllEnemies();
 
         UpdateEnemyHealth();
 
