@@ -79,7 +79,7 @@ public class Enemy1Behaviour : MonoBehaviour
     void Update()
     {
 
-        // DestroyAllEnemies();
+        DestroyAllEnemies();
 
         UpdateEnemyHealth();
 
@@ -152,7 +152,7 @@ public class Enemy1Behaviour : MonoBehaviour
     /// </summary>
     public void DestroyAllEnemies()
     {
-        if(PlayerStats.Instance.playerScore == PlayerStats.Instance.scoreNeededLevel1) // Needs to be upgraded so that when you are in a new level it still spawns, since now it does not
+        if(PlayerStats.Instance.playerScore == PlayerStats.Instance.scoreNeededLevel1 &&PlayerStats.Instance.StageTracker == 1) // Needs to be upgraded so that when you are in a new level it still spawns, since now it does not
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy1");
             foreach (GameObject enemy in enemies)

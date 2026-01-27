@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
     /// </summary>
     void SpawnEnemy()
     {
-        if (PlayerStats.Instance.levelTracker == 1)
+        if (PlayerStats.Instance.StageTracker == 1)
         {
             if (currentEnemyCount >= maxEnemies)
                 return;

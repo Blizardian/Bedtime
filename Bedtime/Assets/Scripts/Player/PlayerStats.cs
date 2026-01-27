@@ -16,9 +16,9 @@ public class PlayerStats : MonoBehaviour
     public int playerScore;
     public int scoreReceivedOnKill;
     public int scoreNeededLevel1;
-    //public int scoreNeededLevel2;
+    public int scoreNeededLevel2;
     //public int scoreNeededLevel3;
-    public int levelTracker;
+    public int StageTracker;
     [Tooltip("This needs to be assigned manually!")]
     public TMP_Text scoreText;
 
@@ -30,7 +30,8 @@ public class PlayerStats : MonoBehaviour
     {
         scoreReceivedOnKill = 50;
         scoreNeededLevel1 = 250;
-        levelTracker = 1;
+        scoreNeededLevel2 = 300;
+        StageTracker = 1;
         SetMaxHealth();
 
         if (Instance != null && Instance != this)
@@ -51,8 +52,7 @@ public class PlayerStats : MonoBehaviour
         HealthChecker();
 
         CompletedLevel();
-
-        ShowScoreLevel1();
+        
     }
 
     /// <summary>
@@ -61,6 +61,13 @@ public class PlayerStats : MonoBehaviour
     private void ShowScoreLevel1()
     {
         scoreText.text = "Score: " + playerScore + "/ " + scoreNeededLevel1; // Updates the scoreText with the player's score and the score that is needed
+    }
+    /// <summary>
+    /// Shows the score and score needed for level 2
+    /// </summary>
+    private void ShowScoreLevel2()
+    {
+        scoreText.text = "Score: " + playerScore + "/ " + scoreNeededLevel2; // Updates the scoreText with the player's score and the score that is needed
     }
 
     /// <summary>
@@ -107,18 +114,24 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     private void CompletedLevel()
     {
-            switch (levelTracker)
+            switch (StageTracker)
             {
                 case 1:
+                ShowScoreLevel1();
 
                 if (playerScore == scoreNeededLevel1)
                 {
-                    levelTracker = 2;
+                    StageTracker = 2;
                     playerScore = 0;
-                    ButtonMethods.conditionText = "You Won!";
-                    SceneManager.LoadScene(2);
+                    //ButtonMethods.conditionText = "You Won!";
+                    //SceneManager.LoadScene(2);
                 }
-                    break;
+
+                break;
+                    
+            case 2:
+                ShowScoreLevel2();
+                break;
             }
         }
 }
