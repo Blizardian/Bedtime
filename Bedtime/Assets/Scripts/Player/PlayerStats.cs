@@ -107,17 +107,18 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     private void CompletedLevel()
     {
-        if(playerScore == scoreNeededLevel1)
-        {
             switch (levelTracker)
             {
                 case 1:
+
+                if (playerScore == scoreNeededLevel1)
+                {
                     levelTracker = 2;
                     playerScore = 0;
                     ButtonMethods.conditionText = "You Won!";
                     SceneManager.LoadScene(2);
+                }
                     break;
             }
         }
-    }
 }
