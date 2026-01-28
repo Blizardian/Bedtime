@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 593957035461773683}
   - component: {fileID: 7538611974581550140}
   - component: {fileID: 3886911507865752112}
+  - component: {fileID: 1380963500679787783}
   m_Layer: 0
   m_Name: Wheel_main
   m_TagString: Untagged
@@ -93,6 +94,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &1380963500679787783
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563293873089516725}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c26345a109a78904bbd22400d73be659, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3102155810396528474
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7262602771184708045}
+  - component: {fileID: 5818818363892036547}
   m_Layer: 0
   m_Name: All elements supposed to move (and the pivot set to make it so
   m_TagString: Untagged
@@ -213,10 +237,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1600918758826204777}
   - {fileID: 4904764793817274872}
+  - {fileID: 1600918758826204777}
   m_Father: {fileID: 8339772368843384551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5818818363892036547
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135017420010516326}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1adc7e57b4b00b64fb6295edf894c4d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3425058260646254598
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,13 +839,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7810343543373092884}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.20094626, y: 2.4313698, z: 0}
+  m_LocalRotation: {x: 0.00020122295, y: -0.00055680826, z: 0.0016935699, w: 0.9999984}
+  m_LocalPosition: {x: 0.20094626, y: 2.4313698, z: 1.6604166e-11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8339772368843384551}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.023, y: -0.064, z: 0.194}
 --- !u!33 &1432876324516312956
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -974,7 +1020,7 @@ Transform:
   m_GameObject: {fileID: 8798495734970853713}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.063729785, y: 1.1859851, z: 0}
+  m_LocalPosition: {x: 0.06372979, y: 1.1859851, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
