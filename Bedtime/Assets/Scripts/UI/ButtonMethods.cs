@@ -11,7 +11,7 @@ public class ButtonMethods : MonoBehaviour
     public void Start()
     {
         winOrLoseText.text = conditionText; // Updates this text accordingly
-        PlayerMovement.Instance.UnlockCursor(); // Unlocks the cursor (So the player can interact with the UI)
+        PlayerMovement.UnlockCursor(); // Unlocks the cursor (So the player can interact with the UI)
     }
     public void RestartScene()
     {

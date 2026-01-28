@@ -31,6 +31,9 @@ public class PlayerStats : MonoBehaviour
     GameObject door;
     Animator doorAnimator;
 
+    // Light
+    public GameObject endLight;
+
     private void Awake()
     {
         scoreReceivedOnKill = 50;
@@ -49,6 +52,8 @@ public class PlayerStats : MonoBehaviour
 
         door = GameObject.Find("Door");
         doorAnimator = door.GetComponent<Animator>();
+        endLight = GameObject.Find("EndTrigger");
+        endLight.SetActive(false);
 
     }
 
@@ -61,7 +66,17 @@ public class PlayerStats : MonoBehaviour
         HealthChecker();
 
         CompletedLevel();
-        
+
+        QuickReturnToMainMenu();
+    }
+
+    private static void QuickReturnToMainMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0); // Return to the main menu
+            PlayerMovement.UnlockCursor();
+        }
     }
 
     /// <summary>
@@ -88,7 +103,7 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.Log("Player has died");
             ButtonMethods.conditionText = "You lost!";
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2); // Load the level
         }
     }
 
@@ -124,6 +139,20 @@ public class PlayerStats : MonoBehaviour
         doorAnimator.enabled = true;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "EndTrigger" && StageTracker == 2)
+        {
+            SceneManager.LoadScene(3); // Load the end scene
+        }
+
+        if (other.gameObject.name == "Stage3Trigger" && StageTracker == 2)
+        {
+            StageTracker = 3;
+            Destroy(other.gameObject);
+        }
+    }
+
     /// <summary>
     /// Marks the level as completed
     /// </summary>
@@ -138,14 +167,18 @@ public class PlayerStats : MonoBehaviour
                 {
                     StageTracker = 2;
                     playerScore = 0;
-                    //ButtonMethods.conditionText = "You Won!";
-                    //SceneManager.LoadScene(2);
+                    ButtonMethods.conditionText = "You Won!";
                 }
                 break;
                     
             case 2:
+                playerScore = 0;
                 ShowScoreLevel2();
                 OpenDoor();
+                endLight.SetActive(true);
+                break;
+            case 3:
+                ShowScoreLevel2();
                 break;
             }
         }

@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Unlock The cursor
     /// </summary>
-    public void UnlockCursor()
+    public static void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
