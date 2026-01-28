@@ -1,89 +1,96 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2412333281694758078
+--- !u!1 &1834786604521295091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7989350935103950313}
+  m_Layer: 0
+  m_Name: Prefab_Enemy_Balloon_Dog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7989350935103950313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834786604521295091}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.06088915, z: -0, w: 0.99814457}
+  m_LocalPosition: {x: -9.613562, y: 0.627, z: 102.60096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1094212866323154014}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 713.018, z: 0}
+--- !u!1001 &7722798000465797570
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 7989350935103950313}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7549431
+      value: 2.5380301
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000005903273
+      value: -0.627
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 102.59896
+      value: 0.0236969
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
+    - target: {fileID: 8018764398375386918, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
       propertyPath: m_Name
-      value: Prefab_Enemy_Balloon_Dog
+      value: Balloon dog (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8772943886274358947}
-  m_SourcePrefab: {fileID: 100100000, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
---- !u!1 &3295295203644639727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eaf70e4cc28353b45a98c02c7449b732, type: 3}
-  m_PrefabInstance: {fileID: 2412333281694758078}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
+--- !u!4 &1094212866323154014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7206761130625525148, guid: cd3be6b3b1a223e4a8aea50c8afdaa51, type: 3}
+  m_PrefabInstance: {fileID: 7722798000465797570}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &8772943886274358947
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295295203644639727}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f0e07ed583eac2848bbb738ca8d59707, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
