@@ -221,6 +221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball pit R
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d7bb144c3995ab4bac30ae580c2dd43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -550,6 +554,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8d7bb144c3995ab4bac30ae580c2dd43, type: 3}
       propertyPath: m_Name
       value: Ball pit L
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d7bb144c3995ab4bac30ae580c2dd43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1174,7 +1182,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.1
+  m_VoxelSize: 0.11666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: c78a67f8d943386448e510bf85d3bc20, type: 2}
   m_BuildHeightMesh: 0
@@ -1352,6 +1360,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2507692736353717840, guid: cef2a488531596949a2cf23281c1cb54, type: 3}
   m_PrefabInstance: {fileID: 2090492295}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &871474666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7791504510154342260, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
+  m_PrefabInstance: {fileID: 1438176769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &871474668
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871474666}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50ede5c9afafcfb4c825daf8c144a628, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1147700014 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 338103353003938389, guid: 6f015d08422212d4e82f66e10b190eb3, type: 3}
@@ -1563,6 +1598,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2744681693474530551, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 624667633}
+    - targetCorrespondingSourceObject: {fileID: 7791504510154342260, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 871474668}
+    - targetCorrespondingSourceObject: {fileID: 2653653105630293575, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1774627742}
   m_SourcePrefab: {fileID: 100100000, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
 --- !u!114 &1490384983 stripped
 MonoBehaviour:
@@ -1747,6 +1788,32 @@ Transform:
   - {fileID: 1295442682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1774627738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2653653105630293575, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
+  m_PrefabInstance: {fileID: 1438176769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1774627742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774627738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.22810546, y: 2.3719702, z: 2.3719702}
+  m_Center: {x: 0.0000038072467, y: 0, z: 0.0000076293945}
 --- !u!1 &1806517039
 GameObject:
   m_ObjectHideFlags: 0
