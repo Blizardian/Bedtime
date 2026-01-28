@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Main Menu.unity
     guid: 073708aa441384149ba68c424cac486d
   - enabled: 1
-    path: Assets/Scenes/Luke/WorkSceneLuke.unity
-    guid: 31a906ae64fd59b42b4691c1dfb9f8dc
+    path: Assets/Scenes/Luke/Game.unity
+    guid: bc0c2dc2f92b0f649ac726372a89243c
   - enabled: 1
     path: Assets/Scenes/Menu/WinOrLoseScene.unity
     guid: e17f08ab3354afb449b9af5eb0276eda
