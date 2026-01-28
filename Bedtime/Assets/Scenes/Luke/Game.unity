@@ -1544,6 +1544,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room01
       objectReference: {fileID: 0}
+    - target: {fileID: 4995218300413447687, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379946747246342762, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379946747246342762, guid: 56a4decaf9a564a4fb88bd662cd6b80b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
