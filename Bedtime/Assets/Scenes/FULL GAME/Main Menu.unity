@@ -1256,7 +1256,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1205714670}
         m_TargetAssemblyTypeName: ButtonMethods, Assembly-CSharp
-        m_MethodName: LoadLevel1
+        m_MethodName: LoadIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

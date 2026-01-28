@@ -26,11 +26,16 @@ public class PlayerStats : MonoBehaviour
     [Tooltip("This needs to be assigned manually!")]
     public Slider healthBar; // Set in the inspector
 
+    // Door
+    [Tooltip("This needs to be assigned manually!")]
+    GameObject door;
+    Animator doorAnimator;
+
     private void Awake()
     {
         scoreReceivedOnKill = 50;
-        scoreNeededLevel1 = 1500;
-        scoreNeededLevel2 = 300;
+        scoreNeededLevel1 = 300;
+        scoreNeededLevel2 = 500;
         StageTracker = 1;
         SetMaxHealth();
 
@@ -41,6 +46,10 @@ public class PlayerStats : MonoBehaviour
         }
 
         Instance = this;
+
+        door = GameObject.Find("Door");
+        doorAnimator = door.GetComponent<Animator>();
+
     }
 
     void Update()
@@ -109,6 +118,12 @@ public class PlayerStats : MonoBehaviour
     {
         HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start"); // Ensures the HP is full at the start
     }
+
+    public void OpenDoor()
+    {
+        doorAnimator.enabled = true;
+    }
+
     /// <summary>
     /// Marks the level as completed
     /// </summary>
@@ -126,11 +141,11 @@ public class PlayerStats : MonoBehaviour
                     //ButtonMethods.conditionText = "You Won!";
                     //SceneManager.LoadScene(2);
                 }
-
                 break;
                     
             case 2:
                 ShowScoreLevel2();
+                OpenDoor();
                 break;
             }
         }

@@ -21,7 +21,12 @@ public class ButtonMethods : MonoBehaviour
 
     public void LoadLevel1()
     {
-        SceneManager.LoadScene(1); // Loads the scene number that is given
+        SceneManager.LoadScene(2); // Loads the scene number that is given
+    }
+
+    public void LoadIntro()
+    {
+        SceneManager.LoadScene(1); // Loads the intro
     }
 
     public void GoToMainMenu()
