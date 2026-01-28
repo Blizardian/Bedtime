@@ -766,9 +766,14 @@ MonoBehaviour:
   playerScore: 0
   scoreReceivedOnKill: 0
   scoreNeededLevel1: 0
-  levelTracker: 0
+  scoreNeededLevel2: 0
+  scoreNeededLevel3: 0
+  StageTracker: 0
   scoreText: {fileID: 0}
   healthBar: {fileID: 0}
+  batch1: {fileID: 0}
+  batch2: {fileID: 0}
+  endLight: {fileID: 0}
 --- !u!114 &7430603532844968289
 MonoBehaviour:
   m_ObjectHideFlags: 0

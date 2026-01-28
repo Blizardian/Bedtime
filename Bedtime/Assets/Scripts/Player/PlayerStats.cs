@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour
     public int scoreReceivedOnKill;
     public int scoreNeededLevel1;
     public int scoreNeededLevel2;
-    //public int scoreNeededLevel3;
+    public int scoreNeededLevel3;
     public int StageTracker;
     [Tooltip("This needs to be assigned manually!")]
     public TMP_Text scoreText;
@@ -28,8 +28,14 @@ public class PlayerStats : MonoBehaviour
 
     // Door
     [Tooltip("This needs to be assigned manually!")]
-    GameObject door;
-    Animator doorAnimator;
+    GameObject door02;
+    GameObject door03;
+    Animator doorAnimator02;
+    Animator doorAnimator03;
+
+    //Enemies
+    public GameObject batch1;
+    public GameObject batch2;
 
     // Light
     public GameObject endLight;
@@ -37,8 +43,9 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         scoreReceivedOnKill = 50;
-        scoreNeededLevel1 = 300;
-        scoreNeededLevel2 = 500;
+        scoreNeededLevel1 = 100;
+        scoreNeededLevel2 = 50;
+        scoreNeededLevel3 = 25;
         StageTracker = 1;
         SetMaxHealth();
 
@@ -50,8 +57,15 @@ public class PlayerStats : MonoBehaviour
 
         Instance = this;
 
-        door = GameObject.Find("Door");
-        doorAnimator = door.GetComponent<Animator>();
+        batch1 = GameObject.Find("Batch1");
+        batch1.SetActive(false);
+        batch2 = GameObject.Find("Batch2");
+        batch2.SetActive(false);
+
+        door02 = GameObject.Find("Door");
+        door03 = GameObject.Find("Door03");
+        doorAnimator02 = door02.GetComponent<Animator>();
+        doorAnimator03 = door03.GetComponent<Animator>();
         endLight = GameObject.Find("EndTrigger");
         endLight.SetActive(false);
 
@@ -95,6 +109,22 @@ public class PlayerStats : MonoBehaviour
     }
 
     /// <summary>
+    /// Shows the score and score needed for level 3
+    /// </summary>
+    private void ShowScoreLevel3()
+    {
+        scoreText.text = "Score: " + playerScore + "/ " + scoreNeededLevel3; // Updates the scoreText with the player's score and the score that is needed
+    }
+
+    /// <summary>
+    /// Shows no score
+    /// </summary>
+    private void ShowNone()
+    {
+        scoreText.text = " "; // Updates the scoreText with the player's score and the score that is needed
+    }
+
+    /// <summary>
     /// Checks if the player should be dead or not
     /// </summary>
     private void HealthChecker()
@@ -134,14 +164,19 @@ public class PlayerStats : MonoBehaviour
         HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start"); // Ensures the HP is full at the start
     }
 
-    public void OpenDoor()
+    public void OpenDoor02()
     {
-        doorAnimator.enabled = true;
+        doorAnimator02.enabled = true;
+    }
+
+    public void OpenDoor03()
+    {
+        doorAnimator03.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "EndTrigger" && StageTracker == 2)
+        if (other.gameObject.name == "EndTrigger")
         {
             SceneManager.LoadScene(3); // Load the end scene
         }
@@ -149,6 +184,12 @@ public class PlayerStats : MonoBehaviour
         if (other.gameObject.name == "Stage3Trigger" && StageTracker == 2)
         {
             StageTracker = 3;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.name == "Stage5Trigger" && StageTracker == 4)
+        {
+            StageTracker = 5;
             Destroy(other.gameObject);
         }
     }
@@ -163,7 +204,7 @@ public class PlayerStats : MonoBehaviour
                 case 1:
                 ShowScoreLevel1();
 
-                if (playerScore == scoreNeededLevel1)
+                if (playerScore >= scoreNeededLevel1)
                 {
                     StageTracker = 2;
                     playerScore = 0;
@@ -174,11 +215,39 @@ public class PlayerStats : MonoBehaviour
             case 2:
                 playerScore = 0;
                 ShowScoreLevel2();
-                OpenDoor();
-                endLight.SetActive(true);
+                OpenDoor02();
                 break;
             case 3:
                 ShowScoreLevel2();
+
+                batch1.SetActive(true);
+
+                if (playerScore >= scoreNeededLevel2)
+                {
+                    StageTracker = 4;
+                }
+                    break;
+
+            case 4:
+                ShowScoreLevel3();
+                batch1.SetActive(false);
+                playerScore = 0;
+                OpenDoor03();
+                    break;
+
+            case 5:
+                ShowScoreLevel3();
+                batch2.SetActive(true);
+                if (playerScore >= scoreNeededLevel3)
+                {
+                    StageTracker = 6;
+                }
+                break;
+
+            case 6:
+                ShowNone();
+                batch2.SetActive(false);
+                endLight.SetActive(true);
                 break;
             }
         }
