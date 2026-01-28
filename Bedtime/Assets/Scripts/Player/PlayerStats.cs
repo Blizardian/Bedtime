@@ -29,7 +29,7 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         scoreReceivedOnKill = 50;
-        scoreNeededLevel1 = 250;
+        scoreNeededLevel1 = 1500;
         scoreNeededLevel2 = 300;
         StageTracker = 1;
         SetMaxHealth();

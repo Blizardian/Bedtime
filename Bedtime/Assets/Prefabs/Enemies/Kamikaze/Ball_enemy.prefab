@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1018514931846785932}
   - component: {fileID: 1011498494461165997}
+  - component: {fileID: 3849722784236745673}
+  - component: {fileID: 5184149144489506447}
+  - component: {fileID: 1842369209418461668}
+  - component: {fileID: 5376940771365251883}
   m_Layer: 0
   m_Name: Ball_enemy
   m_TagString: Untagged
@@ -56,6 +60,87 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3849722784236745673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390033349199589686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7f95b0a37db844fbf845fbfefeec41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy1Behaviour
+  enemy1Health: 0
+  target: {fileID: 0}
+  explodeRange: 0
+  explodeTimer: 0
+  explodeTimerMax: 0
+  explodeTimerIsOn: 0
+  explodeRangePrefab: {fileID: 2531609409133433748, guid: 69bb467dc2a6db94cada31493eba1c9b, type: 3}
+  showRange: 0
+  preventExplosionRange: 0
+  healthBar: {fileID: 0}
+  HealthBarObject: {fileID: 0}
+  SpawnerPart: {fileID: 0}
+  explosionEffect: {fileID: 3680142250904156040, guid: d88a7d45834b1a7409d0175f71859d4d, type: 3}
+--- !u!114 &5184149144489506447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390033349199589686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb16669cdde65e1498b345c6e3354919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavMeshEnemy
+  target: {fileID: 0}
+--- !u!135 &1842369209418461668
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390033349199589686}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3917872
+  m_Center: {x: 0, y: -0.1082128, z: 0}
+--- !u!195 &5376940771365251883
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390033349199589686}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.6
+  m_BaseOffset: 0.35
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5332402058100731591
 GameObject:
   m_ObjectHideFlags: 0

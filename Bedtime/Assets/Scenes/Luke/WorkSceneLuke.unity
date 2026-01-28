@@ -3646,7 +3646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66f984171c02604781229507ca42c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  enemyPrefab: {fileID: 9035173706484364066, guid: 8b12d0f7481555f4993432888273b19c, type: 3}
+  enemyPrefab: {fileID: 5965711229134001607, guid: b1afeec64978ab0498bf69cf05950a56, type: 3}
   spawnInterval: 3
 --- !u!1 &1797768448
 GameObject:
@@ -4075,7 +4075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66f984171c02604781229507ca42c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  enemyPrefab: {fileID: 9035173706484364066, guid: 8b12d0f7481555f4993432888273b19c, type: 3}
+  enemyPrefab: {fileID: 5965711229134001607, guid: b1afeec64978ab0498bf69cf05950a56, type: 3}
   spawnInterval: 3
 --- !u!1001 &1915582382
 PrefabInstance:

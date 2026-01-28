@@ -211,8 +211,8 @@ public class Enemy1Behaviour : MonoBehaviour
     /// </summary>
     void ShowExplodeRangeInGame()
     {
-        Vector3 correctScale = new Vector3(explodeRange * 2, 0.0001f, explodeRange * 2);
-        Vector3 position = new Vector3(0, -1.08f, 0);
+        Vector3 correctScale = new Vector3(explodeRange * 1.4f, 0.0001f, explodeRange * 1.4f);
+        Vector3 position = new Vector3(0, -0.35f, 0);
         showExplodeRange.transform.localPosition = position;
         showExplodeRange.transform.localScale = correctScale;
         showExplodeRange.SetActive(true);
