@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{d57297b8-8da7-4de7-91c5-b6484263bf2e}">
+		<property name="assetPath">
+			<value>Enemies/Benyamins_old_stuff/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4e067c1e-fb2b-4af1-96be-dd833657e566}</destination>
+		</relationship>
+	</object>
+</objects>

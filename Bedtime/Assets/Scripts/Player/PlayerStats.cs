@@ -46,7 +46,7 @@ public class PlayerStats : MonoBehaviour
         scoreReceivedOnKill = 50;
         scoreNeededLevel1 = 750; // 750
         scoreNeededLevel2 = 300; // 350
-        scoreNeededLevel3 = 350; // 200
+        scoreNeededLevel3 = 200; // 200
         StageTracker = 1;
         SetMaxHealth();
 
@@ -118,6 +118,11 @@ public class PlayerStats : MonoBehaviour
         scoreText.text = "Score: " + playerScore + "/ " + scoreNeededLevel3; // Updates the scoreText with the player's score and the score that is needed
     }
 
+    private void VoidHitter()
+    {
+        SceneManager.LoadScene(2); // Load the level
+    }
+
     /// <summary>
     /// Shows no score
     /// </summary>
@@ -165,12 +170,17 @@ public class PlayerStats : MonoBehaviour
     {
         HP = MaxHP; Debug.Log("Player's HP is " + HP + " at start"); // Ensures the HP is full at the start
     }
-
+    /// <summary>
+    /// Opens the second door
+    /// </summary>
     public void OpenDoor02()
     {
         doorAnimator02.enabled = true;
     }
 
+    /// <summary>
+    /// Opens the third door
+    /// </summary>
     public void OpenDoor03()
     {
         doorAnimator03.enabled = true;
@@ -193,6 +203,11 @@ public class PlayerStats : MonoBehaviour
         {
             StageTracker = 5;
             Destroy(other.gameObject);
+        }
+
+        if(other.gameObject.name == "Void")
+        {
+            VoidHitter();
         }
     }
 
