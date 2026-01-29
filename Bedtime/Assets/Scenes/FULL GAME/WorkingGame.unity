@@ -5026,7 +5026,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5461,6 +5461,14 @@ PrefabInstance:
     - target: {fileID: 3253886093160577995, guid: 73b0fdd944df5e1458c5b758c3594c51, type: 3}
       propertyPath: m_Name
       value: Room 03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094129136295417927, guid: 73b0fdd944df5e1458c5b758c3594c51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543826361829446386, guid: 73b0fdd944df5e1458c5b758c3594c51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
