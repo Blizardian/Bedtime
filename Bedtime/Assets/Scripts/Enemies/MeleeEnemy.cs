@@ -25,7 +25,7 @@ public class MeleeEnemy : MonoBehaviour
         //healthBarObject = GameObject.Find("HealthBarMelee"); // Automaticly assign the healthBarObject Gameobject
         player = GameObject.Find("Player").transform; // Automaticly assign player
 
-        maxHP = 200; // Set the maxHP
+        maxHP = 100; // Set the maxHP
 
         HP = maxHP; // Set the player's HP
 

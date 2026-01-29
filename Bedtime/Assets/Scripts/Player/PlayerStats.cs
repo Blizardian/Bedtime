@@ -46,7 +46,7 @@ public class PlayerStats : MonoBehaviour
         scoreReceivedOnKill = 50;
         scoreNeededLevel1 = 750; // 750
         scoreNeededLevel2 = 300; // 350
-        scoreNeededLevel3 = 350; // 200
+        scoreNeededLevel3 = 200; // 200
         StageTracker = 1;
         SetMaxHealth();
 
