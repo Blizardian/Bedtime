@@ -27,6 +27,53 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2290172503851242211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SHITPOSTS
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SHITPOSTS
+  Guid:
+    Data1: -1007157266
+    Data2: 1165990937
+    Data3: -2057441388
+    Data4: 1242284468
+  Banks:
+  - {fileID: 8937928289403836211}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 23000
+--- !u!114 &-1934680213980310886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Fmod/FmodLibrary/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639052872037904254
+  FileSizes:
+  - Name: Desktop
+    Value: 1074
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,19 +87,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: 1712734413425058573}
-  - {fileID: 1600663438273094914}
+  - {fileID: 2926987416839909770}
+  - {fileID: 8937928289403836211}
+  - {fileID: -1934680213980310886}
+  - {fileID: 9116224761944848003}
   EditorEvents:
-  - {fileID: -7828912468386936670}
+  - {fileID: -2290172503851242211}
+  - {fileID: 3687120998708816132}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1600663438273094914}
+  - {fileID: -1934680213980310886}
   StringsBanks:
-  - {fileID: 1712734413425058573}
+  - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639050196705265384
+  cacheTime: 639052872978510404
   SerializableEventsDict:
-  - key: event:/Test
+  - key: event:/SHITPOSTS
     index: 0
 --- !u!114 &1600663438273094914
 MonoBehaviour:
@@ -93,4 +143,91 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 766
+  Exists: 1
+--- !u!114 &2926987416839909770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Fmod/FmodLibrary/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639052872037904254
+  FileSizes:
+  - Name: Desktop
+    Value: 930
+  Exists: 1
+--- !u!114 &3687120998708816132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KAMIKAZE_Explosion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/KAMIKAZE_Explosion
+  Guid:
+    Data1: -235879297
+    Data2: 1096693767
+    Data3: 942872507
+    Data4: 1039283965
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8937928289403836211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AmbientSounds.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Fmod/FmodLibrary/Build/Desktop/AmbientSounds.bank
+  Name: AmbientSounds
+  StudioPath: bank:/AmbientSounds
+  lastModified: 639052866747359596
+  FileSizes:
+  - Name: Desktop
+    Value: 916928
+  Exists: 1
+--- !u!114 &9116224761944848003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/EnemySounds.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
+  Name: EnemySounds
+  StudioPath: bank:/EnemySounds
+  lastModified: 639052872978510404
+  FileSizes:
+  - Name: Desktop
+    Value: 20832
   Exists: 1
