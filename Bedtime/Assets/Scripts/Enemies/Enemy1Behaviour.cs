@@ -170,6 +170,9 @@ public class Enemy1Behaviour : MonoBehaviour
         EnemySpawner.currentEnemyCount--; // Updates the current enemy count with one less
     }
 
+    /// <summary>
+    /// Updates the display of the health of the enemy
+    /// </summary>
     private void UpdateEnemyHealth()
     {
         healthBar.value = enemy1Health; // Sets the slider to the to ammount of the health (This updates the HP bar)
