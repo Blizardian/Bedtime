@@ -18,7 +18,7 @@ public class TurretEnemy : MonoBehaviour
     }
     void Update()
     {
-        if (PlayerStats.Instance.StageTracker == 1 && gameObject.CompareTag("TurretLevel1"))
+        if (PlayerStats.Instance.StageTracker == 5 && gameObject.CompareTag("TurretLevel1"))
         {
             transform.LookAt(target.transform); // Always look at the player
 

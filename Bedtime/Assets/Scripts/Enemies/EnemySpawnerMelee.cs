@@ -11,7 +11,6 @@ public class EnemySpawnerMelee : MonoBehaviour
     public static int maxEnemies = 2;
 
     public static int currentEnemyCount = 0;
-
     void Start()
     {
         InvokeRepeating(nameof(SpawnEnemy), 1f, spawnInterval);
@@ -21,10 +20,13 @@ public class EnemySpawnerMelee : MonoBehaviour
 
     private void Update()
     {
-        EnemyCountStabilizer();
+        if(PlayerStats.Instance.StageTracker == 5)
+        {
+            EnemyCountStabilizer();
 
-        Debug.Log("Current" + currentEnemyCount);
-        Debug.Log("Max" + maxEnemies);
+            Debug.Log("Current" + currentEnemyCount);
+            Debug.Log("Max" + maxEnemies);
+        }
     }
 
     //Resets the current ammount of enemies
@@ -49,7 +51,7 @@ public class EnemySpawnerMelee : MonoBehaviour
     /// </summary>
     void SpawnEnemy()
     {
-        if (PlayerStats.Instance.StageTracker == 1)
+        if (PlayerStats.Instance.StageTracker == 5)
         {
             if (currentEnemyCount >= maxEnemies)
                 return;

@@ -36,6 +36,7 @@ public class PlayerStats : MonoBehaviour
     //Enemies
     public GameObject batch1;
     public GameObject batch2;
+    public GameObject batch3;
 
     // Light
     public GameObject endLight;
@@ -43,9 +44,9 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         scoreReceivedOnKill = 50;
-        scoreNeededLevel1 = 100;
-        scoreNeededLevel2 = 50;
-        scoreNeededLevel3 = 25;
+        scoreNeededLevel1 = 750; // 750
+        scoreNeededLevel2 = 300; // 350
+        scoreNeededLevel3 = 350; // 200
         StageTracker = 1;
         SetMaxHealth();
 
@@ -60,7 +61,8 @@ public class PlayerStats : MonoBehaviour
         batch1 = GameObject.Find("Batch1");
         batch1.SetActive(false);
         batch2 = GameObject.Find("Batch2");
-        batch2.SetActive(false);
+        batch2.SetActive(true);
+        batch2 = GameObject.Find("Batch3");
 
         door02 = GameObject.Find("Door");
         door03 = GameObject.Find("Door03");
@@ -121,7 +123,7 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     private void ShowNone()
     {
-        scoreText.text = " "; // Updates the scoreText with the player's score and the score that is needed
+        scoreText.text = "Go through the light! "; // Updates the scoreText with the player's score and the score that is needed
     }
 
     /// <summary>
@@ -216,6 +218,7 @@ public class PlayerStats : MonoBehaviour
                 playerScore = 0;
                 ShowScoreLevel2();
                 OpenDoor02();
+                batch3.SetActive(false);
                 break;
             case 3:
                 ShowScoreLevel2();
