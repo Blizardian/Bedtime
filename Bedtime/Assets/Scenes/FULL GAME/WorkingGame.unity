@@ -8429,6 +8429,26 @@ PrefabInstance:
       propertyPath: conditionText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8689343817144183944, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+      propertyPath: doorOpenSound.Path
+      value: event:/WORLD_GateOpening
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689343817144183944, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+      propertyPath: doorOpenSound.Guid.Data1
+      value: -1023676608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689343817144183944, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+      propertyPath: doorOpenSound.Guid.Data2
+      value: 1128727943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689343817144183944, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+      propertyPath: doorOpenSound.Guid.Data3
+      value: -940487035
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689343817144183944, guid: 3c5d90643df399740a24f727131fe0be, type: 3}
+      propertyPath: doorOpenSound.Guid.Data4
+      value: 279614672
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

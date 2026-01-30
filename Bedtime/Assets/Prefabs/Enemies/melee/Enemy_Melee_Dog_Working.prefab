@@ -191,6 +191,20 @@ MonoBehaviour:
   HP: 0
   maxHP: 0
   showRange: 0
+  attackSound:
+    Guid:
+      Data1: 1885211924
+      Data2: 1302332706
+      Data3: -1613028976
+      Data4: -1420021745
+    Path: event:/PLAYER_Hit
+  meleeMovementSound:
+    Guid:
+      Data1: 2086060712
+      Data2: 1304722395
+      Data3: 1203583921
+      Data4: -666330369
+    Path: event:/MELEE_Movement
 --- !u!195 &3563657037341510454
 NavMeshAgent:
   m_ObjectHideFlags: 0

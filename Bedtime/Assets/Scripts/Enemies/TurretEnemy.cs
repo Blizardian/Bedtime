@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class TurretEnemy : MonoBehaviour
@@ -10,6 +11,10 @@ public class TurretEnemy : MonoBehaviour
     [SerializeField] private float fireRate;
     private float timer;
     private float resetTimer = 0;
+
+    // Sound
+    [Tooltip("This needs to be assigned manually!")]
+    public EventReference rangedShotAudio;
 
     private void Awake()
     {
@@ -26,6 +31,7 @@ public class TurretEnemy : MonoBehaviour
 
             if (timer >= fireRate)
             {
+                RuntimeManager.PlayOneShotAttached(rangedShotAudio, gameObject);
                 Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation); // Spawn the bullet at the right position and rotation
 
                 Debug.Log("Turret Fired Bullet!");

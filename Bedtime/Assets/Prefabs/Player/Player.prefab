@@ -749,6 +749,13 @@ MonoBehaviour:
   weaponPlayer: {fileID: 0}
   weaponUI: {fileID: 0}
   gunFire: {fileID: 3680142250904156040, guid: cfecacdeabe104d43b4af8df562cc766, type: 3}
+  ShotAudio:
+    Guid:
+      Data1: 507564886
+      Data2: 1302396457
+      Data3: -826850113
+      Data4: -210439861
+    Path: event:/PLAYER_Shot
 --- !u!114 &8689343817144183944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,6 +780,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   batch1: {fileID: 0}
   batch2: {fileID: 0}
+  batch3: {fileID: 0}
   endLight: {fileID: 0}
 --- !u!114 &7430603532844968289
 MonoBehaviour:

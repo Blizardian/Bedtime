@@ -155,3 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurretBulletBehaviour
   target: {fileID: 0}
   bulletSpeed: 0
+  attackSound:
+    Guid:
+      Data1: 1885211924
+      Data2: 1302332706
+      Data3: -1613028976
+      Data4: -1420021745
+    Path: event:/PLAYER_Hit

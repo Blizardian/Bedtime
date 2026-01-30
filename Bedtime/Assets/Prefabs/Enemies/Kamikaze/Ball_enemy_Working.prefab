@@ -356,18 +356,32 @@ MonoBehaviour:
   explosionEffect: {fileID: 3680142250904156040, guid: d88a7d45834b1a7409d0175f71859d4d, type: 3}
   explosionWarningSound:
     Guid:
-      Data1: 480278197
-      Data2: 1224415880
-      Data3: -171145570
-      Data4: -636011834
-    Path: event:/ENEMY_Kamikaze_Explosion
+      Data1: -235879297
+      Data2: 1096693767
+      Data3: 942872507
+      Data4: 1039283965
+    Path: event:/KAMIKAZE_ExplosionWarning
   explosionSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2068173974
+      Data2: 1276539785
+      Data3: -591535970
+      Data4: -1594137905
+    Path: event:/KAMIKAZE_ExplosionBoom
+  kamekazeMovement:
+    Guid:
+      Data1: 1351244434
+      Data2: 1208887060
+      Data3: -1179965296
+      Data4: -1202760192
+    Path: event:/KAMIKAZE_Movement
+  attackSound:
+    Guid:
+      Data1: 1885211924
+      Data2: 1302332706
+      Data3: -1613028976
+      Data4: -1420021745
+    Path: event:/PLAYER_Hit
 --- !u!114 &8563416219474188872
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
+using UnityEngine.ProBuilder.Shapes;
 using UnityEngine.UI;
-
 public class PlayerMovement : MonoBehaviour
 {
     // Singleton Related
@@ -34,8 +36,10 @@ public class PlayerMovement : MonoBehaviour
     // Cooldown
     [Tooltip("This needs to be assigned manually!")]
     public Slider DodgeCoolDownSlider;
+
     void Start()
     {
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);

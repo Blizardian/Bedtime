@@ -155,3 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletLogic
   bulletSpeed: 0
   bloodEffect: {fileID: 3680142250904156040, guid: 8b3ea70ba8fb6cb4b993891200af60e7, type: 3}
+  enemyHitSound:
+    Guid:
+      Data1: -1154474372
+      Data2: 1337070064
+      Data3: 1298791046
+      Data4: -1110378177
+    Path: event:/ENEMY_Hit

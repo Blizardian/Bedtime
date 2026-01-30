@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class MeleeEnemy : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class MeleeEnemy : MonoBehaviour
     public int HP;
     public int maxHP;
     [SerializeField] float showRange;
+
+    // Sound
+    [Tooltip("This needs to be assigned manually!")]
+    public EventReference attackSound;
+    public EventReference meleeMovementSound;
     public void Start()
     {
         //healthBarObject = GameObject.Find("HealthBarMelee"); // Automaticly assign the healthBarObject Gameobject
@@ -36,6 +42,7 @@ public class MeleeEnemy : MonoBehaviour
     }
     void Update()
     {
+        //RuntimeManager.PlayOneShotAttached(meleeMovementSound, gameObject);
         float agentRadius = agent.radius; // Acces to the agent's radius
         float distance = Vector3.Distance(player.position, agent.transform.position); // Calculate the distance between the player and the agent
 
@@ -72,6 +79,7 @@ public class MeleeEnemy : MonoBehaviour
     /// </summary>
     void DamagePlayer()
     {
+        RuntimeManager.PlayOneShotAttached(attackSound, gameObject);
         PlayerStats.Instance.HP -= 25;
         UIManager.Instance.ShowHitIndicator(); // Notify the player that he received damage
         Debug.Log("Player hit!");

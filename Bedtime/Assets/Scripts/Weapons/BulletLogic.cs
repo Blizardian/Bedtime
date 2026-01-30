@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 
 public class BulletLogic : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class BulletLogic : MonoBehaviour
 
     // Effect
     public GameObject bloodEffect;
+
+    // Sound
+    public EventReference enemyHitSound;
     void Start()
     {
         bulletSpeed = 60f; // Sets the bullet speed
@@ -30,6 +34,7 @@ public class BulletLogic : MonoBehaviour
             {
                 enemy.enemy1Health -= 50;
                 Instantiate(bloodEffect,collision.gameObject.transform.position, collision.gameObject.transform.rotation); // blood effect
+                RuntimeManager.PlayOneShotAttached(enemyHitSound, gameObject);
                 Debug.Log("Damage done");
             }
             Destroy(gameObject); //  Destroy the bullet
@@ -44,6 +49,7 @@ public class BulletLogic : MonoBehaviour
             {
                 enemy.HP -= 25;
                 Instantiate(bloodEffect, collision.gameObject.transform.position, collision.gameObject.transform.rotation); // blood effect
+                RuntimeManager.PlayOneShotAttached(enemyHitSound, gameObject);
                 Debug.Log("Melee enemy hit");
             }
 

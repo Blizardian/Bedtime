@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -29,7 +30,9 @@ public class PlayerStats : MonoBehaviour
     // Door
     [Tooltip("This needs to be assigned manually!")]
     GameObject door02;
+    bool hasPlayedDoor02 = false;
     GameObject door03;
+    bool hasPlayedDoor03 = false;
     Animator doorAnimator02;
     Animator doorAnimator03;
 
@@ -41,6 +44,9 @@ public class PlayerStats : MonoBehaviour
     // Light
     public GameObject endLight;
 
+    // Sound
+    [Tooltip("This needs to be assigned manually!")]
+    public EventReference doorOpenSound;
     private void Awake()
     {
         scoreReceivedOnKill = 50;
@@ -175,7 +181,13 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     public void OpenDoor02()
     {
+        if (!hasPlayedDoor02)
+        {
+            RuntimeManager.PlayOneShotAttached(doorOpenSound, door02);
+            hasPlayedDoor02 = true;
+        }
         doorAnimator02.enabled = true;
+        
     }
 
     /// <summary>
@@ -183,7 +195,13 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     public void OpenDoor03()
     {
+        if (!hasPlayedDoor03)
+        {
+            RuntimeManager.PlayOneShotAttached(doorOpenSound, door03);
+            hasPlayedDoor03 = true;
+        }
         doorAnimator03.enabled = true;
+        
     }
 
     private void OnTriggerEnter(Collider other)

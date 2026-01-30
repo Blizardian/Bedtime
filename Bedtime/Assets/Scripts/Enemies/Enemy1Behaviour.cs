@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using FMOD.Studio;
 using FMODUnity;
 
 public class Enemy1Behaviour : MonoBehaviour
@@ -38,6 +37,8 @@ public class Enemy1Behaviour : MonoBehaviour
     [Tooltip("This needs to be assigned manually!")]
     public EventReference explosionWarningSound;
     public EventReference explosionSound;
+    public EventReference kamekazeMovement;
+    public EventReference attackSound;
     void Start()
     {
         SpawnerPart = GameObject.Find("Ball pit L");
@@ -100,17 +101,16 @@ public class Enemy1Behaviour : MonoBehaviour
 
         if (target) // If there is a target
         {
-            float distance = Vector3.Distance(target.position, transform.position); // Calculate the distance between the player and the agent
 
+            float distance = Vector3.Distance(target.position, transform.position); // Calculate the distance between the player and the agent
+            //RuntimeManager.PlayOneShotAttached(kamekazeMovement, gameObject);
             if (distance < explodeRange)
             {
                 if (!explodeTimerIsOn)
                 {
                     explodeTimerIsOn = true;
                     RuntimeManager.PlayOneShotAttached(explosionWarningSound, gameObject);
-
                     Debug.Log("Explosion incoming");
-
                 }
             }
 
@@ -128,6 +128,7 @@ public class Enemy1Behaviour : MonoBehaviour
                     if (distance <= explodeRange)
                     {
                         Debug.Log("Player will get damage");
+                        RuntimeManager.PlayOneShotAttached(attackSound, gameObject);
                         PlayerStats.Instance.HP -= 50;
                         UIManager.Instance.ShowHitIndicator(); // Notify the player that he received damage
                     }
@@ -138,6 +139,7 @@ public class Enemy1Behaviour : MonoBehaviour
 
                     SpawnerIntUpdater();
                     Instantiate(explosionEffect, transform.position,transform.rotation);
+                    RuntimeManager.PlayOneShotAttached(explosionSound, gameObject);
                     Destroy(gameObject);
 
                 }

@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class TurretBulletBehaviour : MonoBehaviour
@@ -7,6 +8,9 @@ public class TurretBulletBehaviour : MonoBehaviour
 
     private Rigidbody rb;
 
+    // Sound
+    [Tooltip("This needs to be assigned manually!")]
+    public EventReference attackSound;
     void Start()
     {
         if(bulletSpeed == 0)
@@ -29,6 +33,7 @@ public class TurretBulletBehaviour : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                RuntimeManager.PlayOneShotAttached(attackSound, gameObject);
                 PlayerStats.Instance.HP -= 20; // Player receives damage
                 UIManager.Instance.ShowHitIndicator(); // Notify the player that he received damage
             }

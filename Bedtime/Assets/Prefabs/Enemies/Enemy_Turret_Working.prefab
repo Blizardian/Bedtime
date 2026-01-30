@@ -131,6 +131,13 @@ MonoBehaviour:
   bulletSpawn: {fileID: 5524815210667666678}
   target: {fileID: 0}
   fireRate: 5
+  rangedShotAudio:
+    Guid:
+      Data1: 187896669
+      Data2: 1297472282
+      Data3: -32232024
+      Data4: -724562700
+    Path: event:/RANGED_Shot
 --- !u!1 &7683981042416845757
 GameObject:
   m_ObjectHideFlags: 0

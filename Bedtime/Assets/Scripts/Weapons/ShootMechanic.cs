@@ -1,3 +1,4 @@
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,11 @@ public class ShootMechanic : MonoBehaviour
     public GameObject weaponPlayer;
     public GameObject weaponUI;
     public GameObject gunFire;
+
+
+    // Sound
+    [Tooltip("This needs to be assigned manually!")]
+    public EventReference ShotAudio;
     void Start()
     {
         timerLimit = 3; //  Sets the timer limit
@@ -137,6 +143,7 @@ public class ShootMechanic : MonoBehaviour
         {
             ammoInWeapon--;
             Instantiate(gunFire, spawnPosition.position, spawnPosition.rotation, spawnPosition);
+            RuntimeManager.PlayOneShotAttached(ShotAudio, gameObject);
             GameObject newBullet = Instantiate(bullet, spawnPosition.position, spawnPosition.rotation);
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && ammoInWeapon <= 0)
