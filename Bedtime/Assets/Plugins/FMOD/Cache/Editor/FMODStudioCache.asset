@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639052872037904254
+  lastModified: 639053740973676295
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -94,16 +94,21 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -2290172503851242211}
   - {fileID: 3687120998708816132}
+  - {fileID: 8464726775032944818}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1934680213980310886}
   StringsBanks:
   - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639052872978510404
+  cacheTime: 639053740973696445
   SerializableEventsDict:
   - key: event:/SHITPOSTS
     index: 0
+  - key: event:/KAMIKAZE_Explosion
+    index: 1
+  - key: event:/ENEMY_Kamikaze_Explosion
+    index: 2
 --- !u!114 &1600663438273094914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,10 +164,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639052872037904254
+  lastModified: 639053740973696445
   FileSizes:
   - Name: Desktop
-    Value: 930
+    Value: 984
   Exists: 1
 --- !u!114 &3687120998708816132
 MonoBehaviour:
@@ -191,6 +196,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8464726775032944818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ENEMY_Kamikaze_Explosion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ENEMY_Kamikaze_Explosion
+  Guid:
+    Data1: 480278197
+    Data2: 1224415880
+    Data3: -171145570
+    Data4: -636011834
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8937928289403836211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +238,7 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/AmbientSounds.bank
   Name: AmbientSounds
   StudioPath: bank:/AmbientSounds
-  lastModified: 639052866747359596
+  lastModified: 639053740972854484
   FileSizes:
   - Name: Desktop
     Value: 916928
@@ -226,8 +258,8 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
   Name: EnemySounds
   StudioPath: bank:/EnemySounds
-  lastModified: 639052872978510404
+  lastModified: 639053740973594627
   FileSizes:
   - Name: Desktop
-    Value: 20832
+    Value: 21952
   Exists: 1

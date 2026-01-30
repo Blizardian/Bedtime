@@ -44,7 +44,7 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         scoreReceivedOnKill = 50;
-        scoreNeededLevel1 = 750; // 750
+        scoreNeededLevel1 = 500; // 750
         scoreNeededLevel2 = 300; // 350
         scoreNeededLevel3 = 200; // 200
         StageTracker = 1;
