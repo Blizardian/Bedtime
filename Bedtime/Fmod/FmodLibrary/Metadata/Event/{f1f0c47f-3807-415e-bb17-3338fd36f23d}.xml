@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{f1f0c47f-3807-415e-bb17-3338fd36f23d}">
 		<property name="name">
-			<value>KAMIKAZE_Explosion</value>
+			<value>KAMIKAZE_ExplosionWarning</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>

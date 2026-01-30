@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{aa0cab50-a52b-421c-8450-80c78607b4bb}">
+	<object class="AudioFile" id="{4ca63f3d-558c-4a0c-b116-fbb52238c4d3}">
 		<property name="assetPath">
-			<value>Enemies/Kamikaze/enemie warning.wav</value>
+			<value>Player/Footsteps/PLAYER_Footsteps_02.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.875</value>
+			<value>1.4106122448979592</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{4e067c1e-fb2b-4af1-96be-dd833657e566}</destination>
