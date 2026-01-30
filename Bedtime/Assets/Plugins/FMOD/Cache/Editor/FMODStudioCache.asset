@@ -100,10 +100,12 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639052872978510404
+  cacheTime: 639052893265039272
   SerializableEventsDict:
   - key: event:/SHITPOSTS
     index: 0
+  - key: event:/KAMIKAZE_Explosion
+    index: 1
 --- !u!114 &1600663438273094914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +187,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 9116224761944848003}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -226,8 +228,8 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
   Name: EnemySounds
   StudioPath: bank:/EnemySounds
-  lastModified: 639052872978510404
+  lastModified: 639052893265039272
   FileSizes:
   - Name: Desktop
-    Value: 20832
+    Value: 20800
   Exists: 1

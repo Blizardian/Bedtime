@@ -170,6 +170,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{a8f71420-867b-455f-8818-bde10ab90349}">
+		<property name="volume">
+			<value>-0.5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{1952323c-b0a1-478a-b044-4a40ed838048}</destination>
 		</relationship>
