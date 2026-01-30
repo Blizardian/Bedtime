@@ -481,6 +481,7 @@ MonoBehaviour:
   Banks:
   - AmbientSounds
   - EnemySounds
+  - PlayerSounds
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

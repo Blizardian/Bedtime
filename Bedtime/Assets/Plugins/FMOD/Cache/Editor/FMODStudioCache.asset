@@ -27,6 +27,114 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3365252289605042118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KAMIKAZE_Movement
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/KAMIKAZE_Movement
+  Guid:
+    Data1: 1351244434
+    Data2: 1208887060
+    Data3: -1179965296
+    Data4: -1202760192
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1410
+--- !u!114 &-2894416325326398526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KAMIKAZE_ExplosionBoom
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/KAMIKAZE_ExplosionBoom
+  Guid:
+    Data1: -2068173974
+    Data2: 1276539785
+    Data3: -591535970
+    Data4: -1594137905
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2420607238833339391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MELEE_Movement
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/MELEE_Movement
+  Guid:
+    Data1: 2086060712
+    Data2: 1304722395
+    Data3: 1203583921
+    Data4: -666330369
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1410
+--- !u!114 &-2399779242810229635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KAMIKAZE_ExplosionWarning
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/KAMIKAZE_ExplosionWarning
+  Guid:
+    Data1: -235879297
+    Data2: 1096693767
+    Data3: 942872507
+    Data4: 1039283965
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2290172503851242211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,11 +177,38 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639053740973676295
+  lastModified: 639053803125958620
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &-1228037585726521548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RANGED_Shot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/RANGED_Shot
+  Guid:
+    Data1: 187896669
+    Data2: 1297472282
+    Data3: -32232024
+    Data4: -724562700
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,24 +226,35 @@ MonoBehaviour:
   - {fileID: 8937928289403836211}
   - {fileID: -1934680213980310886}
   - {fileID: 9116224761944848003}
+  - {fileID: 3227989579272302507}
   EditorEvents:
   - {fileID: -2290172503851242211}
-  - {fileID: 3687120998708816132}
-  - {fileID: 8464726775032944818}
+  - {fileID: -2894416325326398526}
+  - {fileID: -2399779242810229635}
+  - {fileID: -3365252289605042118}
+  - {fileID: -2420607238833339391}
+  - {fileID: 3499364434944450629}
+  - {fileID: -1228037585726521548}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1934680213980310886}
   StringsBanks:
   - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639053740973696445
+  cacheTime: 639053803125968622
   SerializableEventsDict:
   - key: event:/SHITPOSTS
     index: 0
-  - key: event:/KAMIKAZE_Explosion
+  - key: event:/KAMIKAZE_ExplosionBoom
     index: 1
-  - key: event:/ENEMY_Kamikaze_Explosion
+  - key: event:/KAMIKAZE_ExplosionWarning
     index: 2
+  - key: event:/KAMIKAZE_Movement
+    index: 3
+  - key: event:/MELEE_Movement
+    index: 4
+  - key: event:/PLAYER_Footsteps
+    index: 5
 --- !u!114 &1600663438273094914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,12 +310,32 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639053740973696445
+  lastModified: 639053803125968622
   FileSizes:
   - Name: Desktop
-    Value: 984
+    Value: 1212
   Exists: 1
---- !u!114 &3687120998708816132
+--- !u!114 &3227989579272302507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerSounds.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Fmod/FmodLibrary/Build/Desktop/PlayerSounds.bank
+  Name: PlayerSounds
+  StudioPath: bank:/PlayerSounds
+  lastModified: 639053792740500092
+  FileSizes:
+  - Name: Desktop
+    Value: 12864
+  Exists: 1
+--- !u!114 &3499364434944450629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,50 +345,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/KAMIKAZE_Explosion
+  m_Name: event:/PLAYER_Footsteps
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/KAMIKAZE_Explosion
+  Path: event:/PLAYER_Footsteps
   Guid:
-    Data1: -235879297
-    Data2: 1096693767
-    Data3: 942872507
-    Data4: 1039283965
+    Data1: 1365759234
+    Data2: 1122283574
+    Data3: -90878811
+    Data4: -447638931
   Banks:
-  - {fileID: 9116224761944848003}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &8464726775032944818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ENEMY_Kamikaze_Explosion
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/ENEMY_Kamikaze_Explosion
-  Guid:
-    Data1: 480278197
-    Data2: 1224415880
-    Data3: -171145570
-    Data4: -636011834
-  Banks:
-  - {fileID: 9116224761944848003}
+  - {fileID: 3227989579272302507}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1410
 --- !u!114 &8937928289403836211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +377,7 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/AmbientSounds.bank
   Name: AmbientSounds
   StudioPath: bank:/AmbientSounds
-  lastModified: 639053740972854484
+  lastModified: 639053803125188482
   FileSizes:
   - Name: Desktop
     Value: 916928
@@ -258,8 +397,8 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
   Name: EnemySounds
   StudioPath: bank:/EnemySounds
-  lastModified: 639053740973594627
+  lastModified: 639053803125902717
   FileSizes:
   - Name: Desktop
-    Value: 21952
+    Value: 118528
   Exists: 1
