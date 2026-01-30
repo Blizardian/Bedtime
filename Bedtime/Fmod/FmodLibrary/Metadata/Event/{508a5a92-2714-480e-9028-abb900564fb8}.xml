@@ -5,7 +5,7 @@
 			<value>KAMIKAZE_Movement</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{f4e40536-218c-45f7-aa40-edb1e7ffaae7}</destination>
@@ -183,9 +183,11 @@
 	<object class="MixerBusEffectChain" id="{c1c9ba68-b2e7-4b4c-860f-6374d7163ede}">
 		<relationship name="effects">
 			<destination>{2ba30ea5-3661-419b-af65-bf2e30b4d5c3}</destination>
+			<destination>{4efade9c-7fe0-41cd-9ddb-2a1a64813ef5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3af2f3d1-5bd8-4860-ac47-cf553315bef4}" />
 	<object class="MixerBusFader" id="{81db7688-55f6-49b2-87b7-96d65ce3a625}" />
 	<object class="MixerBusFader" id="{2ba30ea5-3661-419b-af65-bf2e30b4d5c3}" />
+	<object class="SpatialiserEffect" id="{4efade9c-7fe0-41cd-9ddb-2a1a64813ef5}" />
 </objects>

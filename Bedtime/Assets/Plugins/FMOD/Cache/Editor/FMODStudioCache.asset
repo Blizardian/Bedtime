@@ -48,7 +48,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 9116224761944848003}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -102,7 +102,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 9116224761944848003}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -162,6 +162,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 23000
+--- !u!114 &-2023163468283664145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER_Hit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PLAYER_Hit
+  Guid:
+    Data1: 1885211924
+    Data2: 1302332706
+    Data3: -1613028976
+    Data4: -1420021745
+  Banks:
+  - {fileID: 3227989579272302507}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1934680213980310886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +204,7 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639053803125958620
+  lastModified: 639053832149979637
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -203,7 +230,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 9116224761944848003}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -235,13 +262,15 @@ MonoBehaviour:
   - {fileID: -2420607238833339391}
   - {fileID: 3499364434944450629}
   - {fileID: -1228037585726521548}
+  - {fileID: 4220210284050845273}
+  - {fileID: -2023163468283664145}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1934680213980310886}
   StringsBanks:
   - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639053803125968622
+  cacheTime: 639053832149984875
   SerializableEventsDict:
   - key: event:/SHITPOSTS
     index: 0
@@ -310,10 +339,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639053803125968622
+  lastModified: 639053832149984875
   FileSizes:
   - Name: Desktop
-    Value: 1212
+    Value: 1298
   Exists: 1
 --- !u!114 &3227989579272302507
 MonoBehaviour:
@@ -330,10 +359,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/PlayerSounds.bank
   Name: PlayerSounds
   StudioPath: bank:/PlayerSounds
-  lastModified: 639053792740500092
+  lastModified: 639053831601765169
   FileSizes:
   - Name: Desktop
-    Value: 12864
+    Value: 237568
   Exists: 1
 --- !u!114 &3499364434944450629
 MonoBehaviour:
@@ -362,6 +391,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1410
+--- !u!114 &4220210284050845273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ENEMY_Hit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ENEMY_Hit
+  Guid:
+    Data1: -1154474372
+    Data2: 1337070064
+    Data3: 1298791046
+    Data4: -1110378177
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8937928289403836211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,8 +453,8 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
   Name: EnemySounds
   StudioPath: bank:/EnemySounds
-  lastModified: 639053803125902717
+  lastModified: 639053832149934134
   FileSizes:
   - Name: Desktop
-    Value: 118528
+    Value: 155200
   Exists: 1

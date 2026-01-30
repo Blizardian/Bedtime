@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c78aca83-5c02-4f0b-8e2b-02b4ea9ed81c}">
+		<property name="assetPath">
+			<value>Player/Hit/PLAYER_hitnoise_var02.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8808163265306121</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4e067c1e-fb2b-4af1-96be-dd833657e566}</destination>
+		</relationship>
+	</object>
+</objects>

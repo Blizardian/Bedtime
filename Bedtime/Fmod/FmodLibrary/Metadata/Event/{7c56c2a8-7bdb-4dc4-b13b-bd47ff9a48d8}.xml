@@ -5,7 +5,7 @@
 			<value>MELEE_Movement</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{f4e40536-218c-45f7-aa40-edb1e7ffaae7}</destination>
@@ -166,9 +166,11 @@
 	<object class="MixerBusEffectChain" id="{1142d731-2aad-4d89-9313-381608c42273}">
 		<relationship name="effects">
 			<destination>{367142b1-56ed-4920-a517-d76b4a20b779}</destination>
+			<destination>{e8dbd3d0-64f4-484d-8ec2-8213b70bb49d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3cfcf0c0-39e5-428e-a713-5827c00d865a}" />
 	<object class="MixerBusFader" id="{9d2faa5d-8f23-4f8d-9541-8bc70cd18ebd}" />
 	<object class="MixerBusFader" id="{367142b1-56ed-4920-a517-d76b4a20b779}" />
+	<object class="SpatialiserEffect" id="{e8dbd3d0-64f4-484d-8ec2-8213b70bb49d}" />
 </objects>
