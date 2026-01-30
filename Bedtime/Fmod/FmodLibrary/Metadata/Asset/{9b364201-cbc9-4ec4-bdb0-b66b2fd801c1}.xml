@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{9b364201-cbc9-4ec4-bdb0-b66b2fd801c1}">
+		<property name="assetPath">
+			<value>Ambient/GateOpening/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4e067c1e-fb2b-4af1-96be-dd833657e566}</destination>
+		</relationship>
+	</object>
+</objects>

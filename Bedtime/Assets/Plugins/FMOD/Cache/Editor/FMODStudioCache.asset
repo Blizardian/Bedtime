@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4386932587377458110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WORLD_GateOpening
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/WORLD_GateOpening
+  Guid:
+    Data1: -1023676608
+    Data2: 1128727943
+    Data3: -940487035
+    Data4: 279614672
+  Banks:
+  - {fileID: 8937928289403836211}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3365252289605042118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +231,7 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639053832149979637
+  lastModified: 639053858284683535
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -264,13 +291,14 @@ MonoBehaviour:
   - {fileID: -1228037585726521548}
   - {fileID: 4220210284050845273}
   - {fileID: -2023163468283664145}
+  - {fileID: -4386932587377458110}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1934680213980310886}
   StringsBanks:
   - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639053832149984875
+  cacheTime: 639053858284694348
   SerializableEventsDict:
   - key: event:/SHITPOSTS
     index: 0
@@ -339,10 +367,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639053832149984875
+  lastModified: 639053858284694348
   FileSizes:
   - Name: Desktop
-    Value: 1298
+    Value: 1346
   Exists: 1
 --- !u!114 &3227989579272302507
 MonoBehaviour:
@@ -412,7 +440,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 9116224761944848003}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -433,10 +461,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/AmbientSounds.bank
   Name: AmbientSounds
   StudioPath: bank:/AmbientSounds
-  lastModified: 639053803125188482
+  lastModified: 639053858284608335
   FileSizes:
   - Name: Desktop
-    Value: 916928
+    Value: 1000704
   Exists: 1
 --- !u!114 &9116224761944848003
 MonoBehaviour:
@@ -453,8 +481,8 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
   Name: EnemySounds
   StudioPath: bank:/EnemySounds
-  lastModified: 639053832149934134
+  lastModified: 639053833346266663
   FileSizes:
   - Name: Desktop
-    Value: 155200
+    Value: 155488
   Exists: 1
