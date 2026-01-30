@@ -46,7 +46,7 @@ MonoBehaviour:
     Data3: -1179965296
     Data4: -1202760192
   Banks:
-  - {fileID: 8937928289403836211}
+  - {fileID: 9116224761944848003}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -177,11 +177,38 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639053791266989459
+  lastModified: 639053803125958620
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &-1228037585726521548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RANGED_Shot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/RANGED_Shot
+  Guid:
+    Data1: 187896669
+    Data2: 1297472282
+    Data3: -32232024
+    Data4: -724562700
+  Banks:
+  - {fileID: 9116224761944848003}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,13 +234,14 @@ MonoBehaviour:
   - {fileID: -3365252289605042118}
   - {fileID: -2420607238833339391}
   - {fileID: 3499364434944450629}
+  - {fileID: -1228037585726521548}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1934680213980310886}
   StringsBanks:
   - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639053792740500092
+  cacheTime: 639053803125968622
   SerializableEventsDict:
   - key: event:/SHITPOSTS
     index: 0
@@ -282,10 +310,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639053791266994670
+  lastModified: 639053803125968622
   FileSizes:
   - Name: Desktop
-    Value: 1170
+    Value: 1212
   Exists: 1
 --- !u!114 &3227989579272302507
 MonoBehaviour:
@@ -349,10 +377,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/AmbientSounds.bank
   Name: AmbientSounds
   StudioPath: bank:/AmbientSounds
-  lastModified: 639053782523961384
+  lastModified: 639053803125188482
   FileSizes:
   - Name: Desktop
-    Value: 937088
+    Value: 916928
   Exists: 1
 --- !u!114 &9116224761944848003
 MonoBehaviour:
@@ -369,8 +397,8 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
   Name: EnemySounds
   StudioPath: bank:/EnemySounds
-  lastModified: 639053791266348168
+  lastModified: 639053803125902717
   FileSizes:
   - Name: Desktop
-    Value: 58336
+    Value: 118528
   Exists: 1
