@@ -354,6 +354,20 @@ MonoBehaviour:
   HealthBarObject: {fileID: 6778763749412412931}
   SpawnerPart: {fileID: 0}
   explosionEffect: {fileID: 3680142250904156040, guid: d88a7d45834b1a7409d0175f71859d4d, type: 3}
+  explosionWarningSound:
+    Guid:
+      Data1: 480278197
+      Data2: 1224415880
+      Data3: -171145570
+      Data4: -636011834
+    Path: event:/ENEMY_Kamikaze_Explosion
+  explosionSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &8563416219474188872
 MonoBehaviour:
   m_ObjectHideFlags: 0

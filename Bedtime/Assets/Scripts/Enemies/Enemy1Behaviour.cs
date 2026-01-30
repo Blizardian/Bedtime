@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using FMOD.Studio;
+using FMODUnity;
 
 public class Enemy1Behaviour : MonoBehaviour
 {
@@ -31,6 +33,11 @@ public class Enemy1Behaviour : MonoBehaviour
     // Partical
     [Tooltip("This needs to be assigned manually!")]
     public GameObject explosionEffect;
+
+    // Sound
+    [Tooltip("This needs to be assigned manually!")]
+    public EventReference explosionWarningSound;
+    public EventReference explosionSound;
     void Start()
     {
         SpawnerPart = GameObject.Find("Ball pit L");
@@ -100,8 +107,10 @@ public class Enemy1Behaviour : MonoBehaviour
                 if (!explodeTimerIsOn)
                 {
                     explodeTimerIsOn = true;
+                    RuntimeManager.PlayOneShotAttached(explosionWarningSound, gameObject);
 
                     Debug.Log("Explosion incoming");
+
                 }
             }
 

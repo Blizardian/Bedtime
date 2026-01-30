@@ -27,53 +27,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6946354490954591524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/WorldInteractions.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Fmod/FmodLibrary/Build/Desktop/WorldInteractions.bank
-  Name: WorldInteractions
-  StudioPath: bank:/WorldInteractions
-  lastModified: 639053733237835415
-  FileSizes:
-  - Name: Desktop
-    Value: 1058
-  Exists: 1
---- !u!114 &-3579807273154994572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/WORLD_GateOpens
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/WORLD_GateOpens
-  Guid:
-    Data1: 1460870734
-    Data2: 1293907001
-    Data3: -1268139888
-    Data4: -1767188921
-  Banks:
-  - {fileID: -6946354490954591524}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-2290172503851242211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +69,7 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639053733237785899
+  lastModified: 639053740973676295
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -138,54 +91,24 @@ MonoBehaviour:
   - {fileID: 8937928289403836211}
   - {fileID: -1934680213980310886}
   - {fileID: 9116224761944848003}
-  - {fileID: 3122926969540516632}
-  - {fileID: -6946354490954591524}
   EditorEvents:
   - {fileID: -2290172503851242211}
   - {fileID: 3687120998708816132}
-  - {fileID: 3167686293803278379}
-  - {fileID: 443491154184571931}
-  - {fileID: 5507441468658717223}
-  - {fileID: -3579807273154994572}
+  - {fileID: 8464726775032944818}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1934680213980310886}
   StringsBanks:
   - {fileID: 2926987416839909770}
   cacheVersion: 131856
-  cacheTime: 639053735117343831
+  cacheTime: 639053740973696445
   SerializableEventsDict:
   - key: event:/SHITPOSTS
     index: 0
   - key: event:/KAMIKAZE_Explosion
     index: 1
---- !u!114 &443491154184571931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ENEMY_Ranged_Shot
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/ENEMY_Ranged_Shot
-  Guid:
-    Data1: -410384721
-    Data2: 1318893300
-    Data3: -2085804117
-    Data4: 1518846168
-  Banks:
-  - {fileID: 9116224761944848003}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  - key: event:/ENEMY_Kamikaze_Explosion
+    index: 2
 --- !u!114 &1600663438273094914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,58 +164,11 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639053733237796108
+  lastModified: 639053740973696445
   FileSizes:
   - Name: Desktop
-    Value: 1520
+    Value: 984
   Exists: 1
---- !u!114 &3122926969540516632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/PlayerInteractions.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Fmod/FmodLibrary/Build/Desktop/PlayerInteractions.bank
-  Name: PlayerInteractions
-  StudioPath: bank:/PlayerInteractions
-  lastModified: 639053733237830370
-  FileSizes:
-  - Name: Desktop
-    Value: 506
-  Exists: 1
---- !u!114 &3167686293803278379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BACKGROUND_Ambient noises
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/BACKGROUND_Ambient noises
-  Guid:
-    Data1: 428331641
-    Data2: 1259604992
-    Data3: -485250676
-    Data4: 125233035
-  Banks:
-  - {fileID: 8937928289403836211}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &3687120998708816132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +196,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5507441468658717223
+--- !u!114 &8464726775032944818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,10 +238,10 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/AmbientSounds.bank
   Name: AmbientSounds
   StudioPath: bank:/AmbientSounds
-  lastModified: 639053735117099479
+  lastModified: 639053740972854484
   FileSizes:
   - Name: Desktop
-    Value: 917408
+    Value: 916928
   Exists: 1
 --- !u!114 &9116224761944848003
 MonoBehaviour:
@@ -382,8 +258,8 @@ MonoBehaviour:
   Path: Fmod/FmodLibrary/Build/Desktop/EnemySounds.bank
   Name: EnemySounds
   StudioPath: bank:/EnemySounds
-  lastModified: 639053735117343831
+  lastModified: 639053740973594627
   FileSizes:
   - Name: Desktop
-    Value: 22464
+    Value: 21952
   Exists: 1
